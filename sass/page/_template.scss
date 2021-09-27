@@ -1,94 +1,235 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-    &.noscroll {
-        position: static !important;
-        width: 100%;
-        height: 100%;
-        overflow: hidden !important;
-        overflow-y: hidden !important;
-        margin: 0;
-        padding: 0;
-    }
+  background: #999;
+  &.noscroll {
+    position: static !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    margin: 0;
+    padding: 0;
+  }
+  &.small_size {
+    font-size: 0.938em;
+  }
+  &.large_size {
+    font-size: 1.125em;
+  }
 }
+
 // 最外圍預設為100%
 .wrapper {
+  // width: 100%;
+  width: 1200px;
+  margin: 0px auto;
+  position: relative;
+  background: #fff;
+  @media screen and (max-width: 1200px) {
     width: 100%;
-    margin: 0px auto;
-    @include screen('mobile') {
-        background: #fff;
-        overflow: hidden;
-        overflow-y: auto;
-    }
+  }
+  @include screen('mobile') {
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+  }
 }
+
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
-    padding: 0;
-    margin: 0 auto;
-    max-width: $container-max; //請看_variable.scss
+  padding: 0;
+  margin: 0 auto;
+  max-width: $container-max; //請看_variable.scss
 }
+
 .main {
-    position: relative;
-    margin: 0 auto 5em;
-    @include screen('mobile') {
-        padding-top: 60px;
-    }
-    // 可先設定一個中央區塊最大寬，限制accesskey對齊
-    h2 {
-        line-height: 1.25em;
-    }
+  position: relative;
+  margin: 0 auto 2em;
+  @include screen('mobile') {
+    // padding-top: 60px;
+  }
+  // 可先設定一個中央區塊最大寬，限制accesskey對齊
+  h2 {
+    line-height: 1.25em;
+  }
 }
+
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    > .container {
-        padding-top: 1em;
-        @include gutter(); //gutter 代表左右要留白
-        display: flex;
-    }
-    .center_block {
+  >.container {
+    padding-top: 1em;
+    @include gutter(); //gutter 代表左右要留白
+    display: flex;
+  }
+  .center_block {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .left_block {
+    flex: none;
+    flex-basis: 260px;
+    max-width: 260px;
+    margin-right: 40px;
+    align-self: flex-start;
+    &.hidden {
+      +.center_block {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
+      }
     }
-    .left_block {
+    +.center_block {
+      flex: auto;
+      flex-basis: calc(100% - 300px);
+      max-width: calc(100% - 300px);
+    }
+    @include screen('tablet') {
+      display: none;
+      +.center_block {
         flex: none;
-        flex-basis: 260px;
-        max-width: 260px;
-        margin-right: 40px;
-        align-self: flex-start;
-        &.hidden {
-            + .center_block {
-                flex: none;
-                flex-basis: 100%;
-                max-width: 100%;
-            }
-        }
-        + .center_block {
-            flex: auto;
-            flex-basis: calc(100% - 300px);
-            max-width: calc(100% - 300px);
-        }
-        @include screen('tablet') {
-            display: none;
-            + .center_block {
-                flex: none;
-                flex-basis: 100%;
-                max-width: 100%;
-            }
-        }
+        flex-basis: 100%;
+        max-width: 100%;
+      }
     }
-    &.small_size {
-        font-size: 0.938em;
-    }
-    &.large_size {
-        font-size: 1.125em;
-    }
+  }
 }
+
 .hidden {
-    display: none;
+  display: none;
+}
+
+.enter_hero {
+  position: relative;
+  background: url(../images/enter/hero_pic.jpg) no-repeat center 0;
+  min-height: 657px;
+  h1 {
+    margin: 0;
+    left: 64px;
+    top: 42px;
+    position: absolute;
+  }
+  .hero_title1 {
+    position: absolute;
+    left: 5%;
+    top: 184px;
+    width: 463px;
+    height: 132px;
+    display: block;
+    background: url(../images/enter/hero_title1.png) no-repeat 0 0;
+    font-size: 0;
+  }
+  .hero_title2 {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 666px;
+    height: 100px;
+    background: url(../images/enter/hero_title2.png) no-repeat 0 0;
+  }
+  .hero_search {
+    position: absolute;
+    left: 5%;
+    top: 358px;
+    >div {}
+    .search_block {
+      width: 776px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      background: #fff;
+      padding: .625rem 1rem .375rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 0 5px rgba($color: #000000, $alpha: .3);
+      label {
+        color: $primaryColor;
+        margin-bottom: 0;
+        margin-left: 0.3rem;
+      }
+      select {
+        border: 1px solid #fff;
+        padding: 0.3rem 1.5rem 0.3rem 0.3rem;
+      }
+      .search_type {
+        flex: 1 1 16%;
+      }
+      .search_purpose {
+        flex: 1 1 18%;
+      }
+      .search_item {
+        flex: 1 1 55%;
+      }
+      .search_input {
+        flex: 1 1 5%;
+        input {
+          background: $secondaryColor;
+          color: #fff;
+          border: 0;
+          height: 58px;
+          border-radius: 50px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.enter_countdown {
+  .countdown_title {
+    span {
+      display: block;
+    }
+    .tax_date {}
+    .tax_name {}
+  }
+  .countdown_time {
+    >div {}
+    span {
+      &.day {}
+      &.time {}
+      &.min {}
+    }
+  }
+  .countdown_slogan {}
+  a {
+    &.link1 {}
+    &.link2 {}
+  }
+}
+
+.enter_video {
+  .video_pic {
+    a {
+      img {}
+    }
+  }
+  .video_txt {
+    .tag {
+      a {}
+    }
+    .title {
+      a {}
+    }
+    .txt {
+      a {}
+      p {}
+    }
+  }
+}
+
+.enter_invoice {
+  img {}
+}
+
+.enter_tax {
+  img {}
+  >div {}
 }
