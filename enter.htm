@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
   <!-- 燈箱fancybox -->
   <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/animate.css" />
   <!-- hyUI css -->
   <link rel="stylesheet" href="css/keelung_tax.css">
   <!-- favicon -->
@@ -25,7 +26,7 @@
 
   <!-- wrapper Start -->
   <div class="wrapper">
-    <div class="quickLink">
+    <div class="quickLink wow slideInRight" data-wow-delay="1s">
       <ul>
         <li>
           <a href="">進入首頁</a>
@@ -51,10 +52,10 @@
         <h1>
           <a href="index.htm"><img src="images/enter/logo.png" alt="基隆市稅務局" /></a>
         </h1>
-        <div class="hero_title1">
+        <div class="hero_title1 wow fadeInLeft">
           簡政便民 . 智慧服務
         </div>
-        <div class="hero_search">
+        <div class="hero_search wow fadeInLeft" data-wow-delay=".5s">
           <div class="title">快捷申辦及下載</div>
           <div class="search_block">
             <div class="search_type">
@@ -106,7 +107,7 @@
         </div>
       </div>
       <div class="enter_countdown">
-        <div class="countdown_title">
+        <div class="countdown_title wow fadeInUp">
           <span class="tax_date">5/01 - 5/31</span>
           <span class="tax_name">\ 房屋稅開徵 /</span>
         </div>
@@ -116,13 +117,13 @@
           <span class="hour">06</span>
           <span class="min">02</span>
         </div>
-        <div class="countdown_slogan">
-          <img src="images/enter/countdown_slogan.png" alt="">
+        <div class="countdown_slogan wow fadeInUp" data-wow-delay=".5s">
+          貼心辦稅，真誠服務
         </div>
-        <a href="https://netap.tax.nat.gov.tw/PEFLRX/Ept_Login" class="link1" target="blank">健保卡立即線上查繳稅</a>
-        <a href="https://www.kltb.gov.tw/core/public/public_info.php?cntType=7&Id=1395" class="link2" target="blank">行動支付繳稅專區</a>
+        <a href="https://netap.tax.nat.gov.tw/PEFLRX/Ept_Login" class="link1 wow fadeInUp" target="blank" data-wow-delay="1s">健保卡立即線上查繳稅</a>
+        <a href="https://www.kltb.gov.tw/core/public/public_info.php?cntType=7&Id=1395 " class="link2 wow fadeInUp" target="blank" data-wow-delay="1.5s">行動支付繳稅專區</a>
       </div>
-      <div class="enter_video">
+      <div class="enter_video wow fadeInUp">
         <div class="img-container video_pic">
           <a href="" class=" ">
             <img src="images/enter/event_video.jpg" alt="">
@@ -142,20 +143,20 @@
           </div>
         </div>
       </div>
-      <div class="enter_invoice">
+      <div class="enter_invoice wow fadeInUp">
         <a href=""><img src="images/enter/invoice_pic.jpg" alt=""></a>
       </div>
       <div class="enter_tax">
-        <div class="block1"><img src="images/enter/tax_pic1.jpg" alt=""></div>
-        <div class="block2"><img src="images/enter/tax_pic2.jpg" alt=""></div>
-        <div class="block3">
+        <div class="block1 wow fadeInUp"><img src="images/enter/tax_pic1.jpg" alt=""></div>
+        <div class="block2 wow fadeInUp"><img src="images/enter/tax_pic2.jpg" alt=""></div>
+        <div class="block3 wow fadeInUp">
           <a href=""><img src="images/enter/tax_pic3.jpg" alt=""></a>
         </div>
-        <div class="block4"><img src="images/enter/tax_pic4.jpg" alt=""></div>
-        <div class="block5">
+        <div class="block4 wow fadeInUp"><img src="images/enter/tax_pic4.jpg" alt=""></div>
+        <div class="block5 wow fadeInUp">
           <a href=""><img src="images/enter/tax_pic5.jpg" alt=""></a>
         </div>
-        <div class="block6">
+        <div class="block6 wow fadeInUp">
           <a href=""><img src="images/enter/tax_pic6.jpg" alt=""></a>
         </div>
       </div>
@@ -212,6 +213,18 @@
   <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
   <!-- hyUI -->
   <script src='js/hyui.js'></script>
+  <script src="vendor/wow.min.js "></script>
+  <script>
+    wow = new WOW({
+      animateClass: 'animated',
+      mobile: false,
+      offset: 100,
+      callback: function(box) {
+        console.log("WOW: animating < " + box.tagName.toLowerCase() + ">")
+      }
+    });
+    wow.init();
+  </script>
   <!-- 客製js -->
   <script src='js/customize.js'></script>
 </body>

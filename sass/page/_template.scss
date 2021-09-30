@@ -32,6 +32,7 @@ body {
   margin: 0px auto;
   position: relative;
   background: #fff;
+  overflow: hidden;
   @media screen and (max-width: 1200px) {
     width: 100%;
   }
@@ -479,6 +480,11 @@ body {
     position: absolute;
     right: 9%;
     top: 292px;
+    width: 368px;
+    height: 40px;
+    background: url(../images/enter/countdown_slogan.png) no-repeat 0 0;
+    background-size: 100%;
+    font-size: 0;
     @media screen and (max-width: 800px) {
       right: 5%;
     }
@@ -491,9 +497,6 @@ body {
     }
     @media screen and (max-width: 414px) {
       width: 94%;
-      img {
-        width: 100%;
-      }
     }
   }
   a {
