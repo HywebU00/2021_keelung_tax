@@ -570,10 +570,46 @@ body {
     flex: 0 0 67%;
     max-height: 454px;
     @include aspect-ratio(809, 454);
+    position: relative;
     a {
       display: block;
+      &:before {
+        content: "";
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        background: #333;
+        z-index: 10;
+        transition: all .5s;
+      }
+      &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 24px 0 24px 36px;
+        border-color: transparent transparent transparent #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -24px;
+        z-index: 11;
+      }
       img {
         object-fit: cover;
+      }
+      &:hover,
+      &:focus {
+        &:before {
+          content: "";
+          background: $secondaryColor;
+        }
       }
     }
   }
