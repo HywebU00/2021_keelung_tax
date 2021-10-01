@@ -168,7 +168,9 @@ body {
 }
 
 .quickLink~.main~footer {
-  margin-bottom: 2rem;
+  @media screen and (max-width: 660px) {
+    margin-bottom: 2rem;
+  }
 }
 
 .enter_hero {
@@ -683,4 +685,11 @@ body {
 .jxPOhn {
   bottom: 58px;
   right: -10px;
+}
+
+@include screen('tablet') {
+  .wow {
+    animation-name: none !important;
+    visibility: visible !important;
+  }
 }
