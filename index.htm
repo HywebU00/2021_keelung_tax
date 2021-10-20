@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>單位名稱切版檔案</title>
+  <title>基隆市稅務局</title>
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
   <!-- hyUI -->
-  <link rel="stylesheet" href="css/hyui.css">
+  <link rel="stylesheet" href="css/keelung_tax.css">
   <style>
     .demo_wrap {
       max-width: 1000px;
@@ -24,7 +24,6 @@
     .demo_wrap h1 {
       display: block;
       margin: 0px auto;
-      max-width: 300px;
       float: left;
       margin-right: 1em
     }
@@ -37,9 +36,7 @@
       }
     }
     
-    .demo_wrap h1 img {
-      width: 300px
-    }
+    .demo_wrap h1 img {}
     
     .num {
       width: 12%
@@ -96,7 +93,7 @@
     }
     
     tbody tr td:nth-child(2) {
-      width: 200px
+      /* width: 200px */
     }
     
     tbody tr td:nth-child(3) {
@@ -105,6 +102,7 @@
     
     .btn_grp {
       text-align: right;
+      padding: 0;
     }
     
     @media screen and (max-width:545px) {
@@ -133,10 +131,11 @@
       font-size: 1rem;
       line-height: 1.25em;
       white-space: nowrap;
+      text-align: right;
     }
     
     .table_wrapper h2 {
-      flex: 0 0 150px;
+      flex: 0 0 180px;
       padding-right: 1em;
     }
     
@@ -148,14 +147,15 @@
 
 <body>
   <div class="demo_wrap">
-    <h1><img src="images/logo.png" alt=""></h1>
+    <h1>
+      <img src="images/enter/logo.png" alt="基隆市稅務局" />
+    </h1>
     <div class="btn_grp">
       <a href="https://github.com/HywebU00/2021_keelung_tax.git" class="btn">切版檔案請按此下載</a>
     </div>
     <hr>
     <div class="table_wrapper">
-      <h2>首頁</h2>
-      <!-- hyUI 標準頁面 -->
+      <h2>基本頁面</h2>
       <table>
         <thead>
           <tr>
@@ -179,69 +179,89 @@
               <a href="mp.htm"></a>
             </td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-    <hr>
-    <!-- <div class="table_wrapper">
-      <h2>標準頁面</h2>
-      <table>
-        <thead>
-          <tr>
-            <th class="num">編號</th>
-            <th>頁面名稱</th>
-            <th>檔案名稱</th>
-            <th>備註</th>
-          </tr>
-        </thead>
-        <tbody>
           <tr>
             <td></td>
-            <td>列表頁-條列</td>
-            <td>
-              <a href="lp.htm"></a>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>列表頁-表格</td>
-            <td>
-              <a href="lp_table.htm"></a>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>列表頁-相簿</td>
-            <td>
-              <a href="lp_album.htm"></a>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>內容頁</td>
-            <td>
-              <a href="cp.htm"></a>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>內容頁-照片</td>
-            <td>
-              <a href="cp_photo.htm"></a>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>節點頁</td>
+            <td>np節點頁</td>
             <td>
               <a href="np.htm"></a>
             </td>
+          </tr>
+          <tr>
             <td></td>
+            <td>lp01一般列表頁</td>
+            <td>
+              <a href="lp01.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>lp02表格條列頁</td>
+            <td>
+              <a href="lp02.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>lp03圖片列表頁</td>
+            <td>
+              <a href="lp03.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>lp04附件列表頁</td>
+            <td>
+              <a href="lp04.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>lp05常見問答列表頁</td>
+            <td>
+              <a href="lp05.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>lp06節稅引導地圖</td>
+            <td>
+              <a href="lp06.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>lp07線上申辦及表單下載</td>
+            <td>
+              <a href="lp07.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>cp01一般內容頁</td>
+            <td>
+              <a href="cp01.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>cp02表格內容頁</td>
+            <td>
+              <a href="cp02.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>cp03首長介紹內容頁</td>
+            <td>
+              <a href="cp03.htm"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>cp04線上申辦及表單下載內容頁</td>
+            <td>
+              <a href="cp04.htm"></a>
+            </td>
           </tr>
           <tr>
             <td></td>
@@ -249,31 +269,13 @@
             <td>
               <a href="fp.htm"></a>
             </td>
-            <td></td>
           </tr>
           <tr>
             <td></td>
-            <td>意見信箱</td>
-            <td>
-              <a href="qp.htm"></a>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>網站地圖</td>
+            <td>sitemap網站地圖</td>
             <td>
               <a href="sitemap.htm"></a>
             </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Google Search頁面</td>
-            <td>
-              <a href="gs.htm"></a>
-            </td>
-            <td></td>
           </tr>
           <tr>
             <td></td>
@@ -281,81 +283,401 @@
             <td>
               <a href="404.htm"></a>
             </td>
+          </tr>
+          <tr>
             <td></td>
+            <td>Google Search頁面</td>
+            <td>
+              <a href=gs.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>電子報訂閱</td>
+            <td>
+              <a href="epaper.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>電子報</td>
+            <td>
+              <a href="edm.htm "></a>
+            </td>
           </tr>
         </tbody>
       </table>
-    </div> -->
-    <hr>
-    <!-- <div class="table_wrapper">
-      <h2>特殊頁面+元件</h2>
+    </div>
+    <div class="table_wrapper ">
+      <h2>主題專區</h2>
       <table>
         <thead>
           <tr>
-            <th class="num">編號</th>
+            <th class="num ">編號</th>
             <th>頁面名稱</th>
             <th>檔案名稱</th>
-            <th>備註</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td></td>
-            <td>電子報</td>
+            <td>主題專區np</td>
             <td>
-              <a href="epaper.htm"></a>
+              <a href="topic_np.htm "></a>
             </td>
-            <td></td>
           </tr>
           <tr>
             <td></td>
-            <td>表單</td>
+            <td>主題專區lp</td>
             <td>
-              <a href="form.htm"></a>
+              <a href="topic_lp.htm "></a>
             </td>
-            <td></td>
           </tr>
           <tr>
             <td></td>
-            <td>按鈕樣式</td>
+            <td>主題專區cp</td>
             <td>
-              <a href="btn.htm"></a>
+              <a href="topic_cp.htm "></a>
             </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <div class="table_wrapper ">
+      <h2>開徵專區</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="num ">編號</th>
+            <th>頁面名稱</th>
+            <th>檔案名稱</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td></td>
+            <td>1.使用牌照稅開徵專區</td>
+            <td>
+              <a href="collect1.htm "></a>
+            </td>
           </tr>
           <tr>
             <td></td>
-            <td>圖片輪播</td>
+            <td>2.房屋稅開徵專區</td>
             <td>
-              <a href="slider.htm"></a>
+              <a href="collect2.htm "></a>
             </td>
-            <td></td>
           </tr>
           <tr>
             <td></td>
-            <td>tab 改button</td>
+            <td>3.地價稅開徵專區</td>
             <td>
-              <a href="tab.htm"></a>
+              <a href="collect3.htm "></a>
             </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+    <div class="table_wrapper ">
+      <h2>線上申辦及民意信箱</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="num ">編號</th>
+            <th>頁面名稱</th>
+            <th>檔案名稱</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td></td>
+            <td>1.個資聲明</td>
+            <td>
+              <a href="form1.htm "></a>
+            </td>
           </tr>
           <tr>
             <td></td>
-            <td>...</td>
+            <td>2.E-mail驗證</td>
             <td>
-              <a href="..."></a>
+              <a href="form2.htm "></a>
             </td>
+          </tr>
+          <tr>
             <td></td>
+            <td>​3-1.資料填寫-申請/變更/取消以電子方式傳送繳款書及繳納證明</td>
+            <td>
+              <a href=" "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​​3-2.資料填寫-申請/變更/取消以電子方式傳送轉帳通知及證明</td>
+            <td>
+              <a href="form3-2.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​3-3.資料填寫-以後年度核發紙本繳納證明申請書</td>
+            <td>
+              <a href="form3-3.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​​3-4.資料填寫-申請補發房屋稅地價稅使用牌照稅繳款書</td>
+            <td>
+              <a href="form3-4.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​​3-5.資料填寫-申請核發繳納證明</td>
+            <td>
+              <a href="form3-5.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​3-6.資料填寫-申請核發房屋稅籍證明</td>
+            <td>
+              <a href="form3-6.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​3-7.資料填寫-重溢繳退稅輔導直撥通知單線上回覆</td>
+            <td>
+              <a href="form3-7.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>3-8.資料填寫-一般稅務諮詢及申請服務</td>
+            <td>
+              <a href="form3-8.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​3-9.資料填寫-申請開立印花稅大額憑證繳款書</td>
+            <td>
+              <a href="form3-9.htm "></a>
+            </td>
+          </tr>
+          <!-- <tr>
+            <td></td>
+            <td>​3-10.資料填寫-申請/變更/終止 委託轉帳代繳領各項稅款約定</td>
+            <td>
+              <a href="form3-10.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>3-11.資料填寫-因嚴重特殊傳染性肺炎疫情影響申請延期或分期繳納稅捐作業（地方稅）</td>
+            <td>
+              <a href="form3-11.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​3-12.資料填寫-人民陳情及民意信箱</td>
+            <td>
+              <a href="form3-12.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​3-13.資料填寫-檢舉逃漏稅信箱</td>
+            <td>
+              <a href="form3-13.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​3-14.預約免下車服務</td>
+            <td>
+              <a href="form3-14.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>3-15.預約到府服務</td>
+            <td>
+              <a href="form3-15.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​​​4.預覽確認</td>
+            <td>
+              <a href="form4.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​​​5.案件送出成功</td>
+            <td>
+              <a href="form5.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​​6.案件進度查詢</td>
+            <td>
+              <a href="form6.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>​​​7.案件進度查詢結果</td>
+            <td>
+              <a href="form7.htm "></a>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+    <!-- <div class="table_wrapper ">
+      <h2>問卷調查</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="num ">編號</th>
+            <th>頁面名稱</th>
+            <th>檔案名稱</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>1.問卷調查列表頁</td>
+            <td>
+              <a href="survey1.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>2-1.個資聲明</td>
+            <td>
+              <a href="survey2-1.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>2-2.內容填寫</td>
+            <td>
+              <a href="survey2-2.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>2-3.填寫完成</td>
+            <td>
+              <a href="survey2-2.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>3.統計結果</td>
+            <td>
+              <a href="survey3.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>4.得獎名單</td>
+            <td>
+              <a href="survey4.htm "></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table_wrapper ">
+      <h2>各稅試算</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="num ">編號</th>
+            <th>頁面名稱</th>
+            <th>檔案名稱</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>1.印花稅試算</td>
+            <td>
+              <a href="tax1.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>2.使用牌照稅應納稅額試算</td>
+            <td>
+              <a href="tax2.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>3.使用牌照稅可退稅額試算</td>
+            <td>
+              <a href="tax3.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>4.地價稅稅額試算</td>
+            <td>
+              <a href="tax4.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>5.房屋稅稅額試算</td>
+            <td>
+              <a href="tax52.htm "></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table_wrapper ">
+      <h2>即時查詢</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="num ">編號</th>
+            <th>頁面名稱</th>
+            <th>檔案名稱</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>1.整合查詢</td>
+            <td>
+              <a href="search1.htm "></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>2.退稅處理狀況暨兌領情形查詢</td>
+            <td>
+              <a href="search2.htm "></a>
+            </td>
           </tr>
         </tbody>
       </table>
     </div> -->
   </div>
-  <a href="javascript:;" class="scrollToTop">回頁首</a>
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="vendor/jquery.easing.min.js"></script>
-  <script src="js/hyui.js"></script>
-  <script src="js/customize.js"></script>
+  <a href="javascript:; " class="scrollToTop ">回頁首</a>
+  <script src="js/jquery-3.5.1.min.js "></script>
+  <script src="vendor/jquery.easing.min.js "></script>
+  <script src="js/hyui.js "></script>
+  <script src="js/customize.js "></script>
   <script>
     $(function() {
       $('tbody').find('a').each(function(index, el) {

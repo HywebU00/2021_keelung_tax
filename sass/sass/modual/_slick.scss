@@ -310,12 +310,6 @@
 // adSlider
 //  slick燈箱
 .lightbox_slider {
-  h3 {
-    font-size: 1.5em;
-    padding: 12px 0px 15px 0px;
-    margin: 0.5em 0px 1.2em;
-    border-bottom: 1px solid $primaryColor;
-  }
   background: #fff;
   padding: 1em 0;
   clear: both;
@@ -385,12 +379,6 @@
 //
 // slick燈箱
 .lightbox_slider_block {
-  h3 {
-    font-size: 1.5em;
-    padding: 12px 0px 15px 0px;
-    margin: 0.5em 0px 1.2em;
-    border-bottom: 1px solid $primaryColor;
-  }
   background: #fff;
   padding: 1em 0;
   clear: both;
@@ -421,14 +409,14 @@
     transition: .3s ease-out;
   }
   // dots
-  .slick-dots {
-    bottom: -60px;
-    li {
-      width: 10px;
-      height: 10px;
-      margin: 0 10px;
-    }
-  }
+  // .slick-dots {
+  //   bottom: -60px;
+  //   li {
+  //     width: 10px;
+  //     height: 10px;
+  //     margin: 0 10px;
+  //   }
+  // }
   //Arrows
   .slick-prev {
     // left: -1 * $grid-gutter-width/2;

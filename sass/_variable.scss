@@ -8,6 +8,9 @@ $lightColor: #ffd201; //點綴
 $linkColor: #007c69; //連結
 $importantColor: #eb0202; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
+$leftmenuHover :#bbb;
+$leftmenuColor :$primaryColor;
+$leftmenuActive:$primaryColor;
 $color-blue: #0066cc;
 $color-green: #298729;
 $color-orange: #d04500;
@@ -21,10 +24,10 @@ $color-word: #222; //一般字的顏色
 $btn-word: #222; //按鈕字的顏色
 $sliderDot:#d93e10;
 $sliderDotActive:#008470;
-// 連結顏色
+$text-color:#222; // 連結顏色
 $aColor: #008470;
-$aHover: darken($aColor, 10);
-$aFocus: #008470;
+$aHover: #d93e10;
+$aFocus: #d93e10;
 // 表單focus顏色
 $form-focus: #008470; //表單
 $form-btn: #008470; //表單

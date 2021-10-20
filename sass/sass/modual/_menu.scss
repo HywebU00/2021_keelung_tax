@@ -72,9 +72,6 @@
     border-radius: 50%;
     background: rgba(0, 0, 0, .3);
     transition: all .5s;
-    @include screen('mobile') {
-      display: none;
-    }
     &:before,
     &:after {
       content: "";

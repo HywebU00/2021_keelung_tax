@@ -235,17 +235,23 @@ $(function() {
     e.preventDefault();
   });
   _menuSwitch.click(function(e) {
+    _menu1.slideDown();
     e.stopPropagation();
   });
-  _menu1.find('a.close').focusout(function(e) {
+  _menu1.find('.close').focusout(function(e) {
     _menu1.hide();
+    _body.removeClass('noscroll');
     e.preventDefault();
   });
-  _menu1.find('a.close').click(function(e) {
+  _menu1.find('.close').click(function(e) {
     _menu1.hide();
     e.preventDefault();
   });
 
+  $(".searchSwitch").click(function(e) {
+    $(".search").slideToggle();
+    e.preventDefault();
+  });
 
   // search設定
   var search_mode = false;
@@ -524,8 +530,8 @@ $(function() {
   /*------------------------------------*/
   //////////分享按鈕 share dropdwon////////
   /*------------------------------------*/
-  $('.function_panel .share').children('ul').hide();
-  $('.function_panel .share').prepend('<a href="#" class="shareButton">share分享按鈕</a>');
+  $('.share').children('ul').hide();
+  $('.share').prepend('<a href="#" class="shareButton">share分享按鈕</a>');
   var _shareButton = $('.shareButton');
   _shareButton.off().click(function(e) {
     $(this).siblings('ul').stop(true, true).slideToggle();
@@ -534,16 +540,16 @@ $(function() {
   _shareButton.keyup(function(event) {
     $(this).siblings('ul').stop(true, true).slideDown();
   });
-  $('.function_panel .share')
+  $('.share')
     .find('li:last>a')
     .focusout(function(event) {
       $(this).parent().parent('ul').hide();
     });
   // 點外面關閉share
   $(document).on('touchend click', function(e) {
-    var container = $('.function_panel .share');
+    var container = $('.share');
     if (!container.is(e.target) && container.has(e.target).length === 0) {
-      $('.function_panel .share ul').hide();
+      $('.share ul').hide();
     }
   });
   /*------------------------------------*/

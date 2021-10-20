@@ -13,7 +13,7 @@
   right: 10px;
   transition: 0.3s ease-out;
   display: none;
-  z-index: 99999999;
+  z-index: 999;
   text-indent: -999999px;
   @media screen and (max-width: 660px) {
     bottom: 4.5rem;
@@ -59,3 +59,119 @@
 //     background-size: contain;
 //   }
 // }
+$fileTypePic: doc,
+docx,
+odt,
+xls,
+xlsx,
+csv,
+ods,
+ppt,
+pptx,
+odp,
+zip,
+txt,
+mov,
+mp3,
+jpg,
+wmv,
+mp4,
+pdf,
+other;
+@each $fileTypePic in $fileTypePic {
+  a.file_#{$fileTypePic} {
+    font-size: 0;
+    display: inline-block;
+    &:before {
+      content: "";
+      background: url(../images/basic/icon_#{$fileTypePic}.png) no-repeat center center;
+      width: 26px;
+      height: 28px;
+      font-size: 0;
+      overflow: hidden;
+      vertical-align: middle;
+      background-size: contain;
+      display: inline-block;
+    }
+    span {
+      display: inline-block;
+      font-size: .875rem;
+      color: #767676;
+      vertical-align: middle;
+      @include screen('mobile') {
+        // display: block;
+        // margin-right: 0;
+        // margin-bottom: .2em;
+      }
+    }
+    &:focus {
+      box-shadow: 0 0px 0px 2px $secondaryColor;
+    }
+  }
+}
+
+.icon_file {
+  font-size: 0;
+  display: inline-block;
+  &:before {
+    content: "";
+    background: url(../images/basic/icon_download.svg) no-repeat center center;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    background-size: contain;
+    display: inline-block;
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      background: url(../images/basic/icon_download_.svg) no-repeat center center;
+    }
+  }
+}
+
+.icon_safe {
+  font-size: 0;
+  display: inline-block;
+  &:before {
+    content: "";
+    background: url(../images/basic/icon_safe.svg) no-repeat center center;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    background-size: contain;
+    display: inline-block;
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      background: url(../images/basic/icon_safe_.svg) no-repeat center center;
+    }
+  }
+}
+
+.icon_safe_ {
+  font-size: 0;
+  display: inline-block;
+  &:before {
+    content: "";
+    background: url(../images/basic/icon_safe2.svg) no-repeat center center;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    background-size: contain;
+    display: inline-block;
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      background: url(../images/basic/icon_safe2_.svg) no-repeat center center;
+    }
+  }
+}

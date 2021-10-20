@@ -399,3 +399,59 @@ jQuery('img.svg').each(function() {
   }, 'xml');
 
 });
+$(".adSearch_btn").click(function(e) {
+  $(".adSearch_form").slideToggle();
+  e.preventDefault();
+});
+$(".adSearch_form .btn_grp button:last-child").focusout(function(e) {
+  $(".adSearch_form").slideUp();
+});
+
+$(".list_qa li").each(function() {
+  var _qq = $(this).children('.list_q');
+  var _question = $(this).children('.list_q').children('a');
+  var _switch = _question.children('.switch');
+  var _answer = $(this).children('.list_a');
+  _answer.hide();
+
+  function accordion(e) {
+    if (_answer.is(':visible')) {
+      _answer.slideUp();
+      _switch.text('展開').removeClass('close');
+      _qq.removeClass('active');
+    } else {
+      _answer.slideDown();
+      _switch.text('收合').addClass('close');
+      _qq.addClass('active');
+    }
+    e.preventDefault();
+  }
+  _question.click(accordion);
+});
+
+
+$(function() {
+  $('.left_block ul>li>a').each(function() {
+    $(".left_block ul ul").hide();
+    $(".left_block ul ul li a.active").parent('li').parent('ul').show();
+
+    function leftnav(e) {
+      $(this).parent('li').siblings().children('a').removeClass('active');
+      $(this).toggleClass('active');
+      $(this).parent('li').siblings().children('ul').slideUp();
+      $(this).next('ul').slideToggle();
+      if ($(this).parent().find('ul').length > 0)
+        e.preventDefault();
+    }
+    $(this).click(leftnav);
+    $(this).keyup(leftnav);
+  });
+});
+$(function() {
+  var ww = $(window).outerWidth();
+  if (ww <= 768) {
+    $(".left_block .left_title").click(function(e) {
+      $(this).next("ul").slideToggle();
+    });
+  } else {}
+});
