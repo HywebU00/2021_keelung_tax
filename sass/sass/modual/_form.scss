@@ -64,6 +64,9 @@ select::-ms-expand {
   .form_grp {
     border-bottom: 1px dashed #ddd;
     padding: 0.5em 0;
+    .form_grp {
+      border-bottom: 0;
+    }
   }
 }
 

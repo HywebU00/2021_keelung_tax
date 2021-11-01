@@ -64,9 +64,9 @@
       a {
         display: block;
         color: #fff;
-        // padding: 0.5em 0.5em 0.5em 1em;
-        padding: 0.5em 1em;
+        padding: 0.5em;
         transition: 0.3s ease-out;
+        white-space: nowrap;
         &:hover,
         &:focus {
           background: RGBA(0, 0, 0, 0.3);

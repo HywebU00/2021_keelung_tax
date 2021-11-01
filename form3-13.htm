@@ -202,7 +202,7 @@
             <label for="mustSameAsId">搜尋</label>
             <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容">
             <button type="button" class="btn btn-search">查詢</button>
-            <button type="button" class="btn ">進階搜尋</button>
+            <button type="button" class="btn">進階搜尋</button>
           </div>
           <div class="keywordHot">
             熱門關鍵字：
@@ -236,7 +236,7 @@
             </ul>
           </div>
           <!-- h2節點 -->
-          <h2 class="title">申請核發房屋稅籍證明</h2>
+          <h2 class="title">檢舉逃漏稅信箱</h2>
           <!-- function_panel -->
           <div class="function_panel">
             <!-- function功能區塊 -->
@@ -307,126 +307,243 @@
               </ul>
             </div>
             <div class="noticeTxt">
-              <ul>
-                <li>課稅標的以基隆市者為限。</li>
-                <li>填妥各欄位之資料確認後送出，若申辦成功，於本網頁及您所填寫的E-mail帳號會傳送本案收件編號訊息，您可以用此案件編號在前一頁案件/進度查詢，查詢案件辦理進度。</li>
-              </ul>
-              <div class="aware">
-                <h3>應備證件</h3>
-                <p>申請人為代理人，應檢附本人及代理人身分證明文件及授權書，如為繼承案件另需檢附與納稅義務人之關係證明文件影本。</p>
-              </div>
+              <ol>
+                <li>檢舉逃漏國稅(綜合所得稅、營利事業所得稅、營業稅、遺產及贈與稅、貨物稅、菸酒稅、證券交易稅、期貨交易稅、特種貨物及勞務稅)，例如：<em>(1)短漏開發票(2)未辦理營業登記(3)虛報員工薪資(4)漏報租金所得…等事項</em>，連結「財政部北區國稅局檢舉逃漏稅信箱」，向主管機關國稅局提出檢舉。</li>
+                <li>檢舉逃漏本市（基隆市）地方稅：房屋稅、地價稅、印花稅、土地增值稅、使用牌照稅、契稅、娛樂稅者，請填寫下方檢舉逃漏稅資料。檢舉非本市之逃漏地方稅案件，為掌握時效，請逕向管轄之地方稅務機關檢舉。</li>
+              </ol>
             </div>
             <div class="apply">
               <p>註:<abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>欄位, 不能為空白。</p>
               <div class="apply_form">
                 <form action="" class="flex-form form_grid">
+                  <h3>服務項目</h3>
                   <div class="shadowOut">
                     <div class="form_group">
-                      <!-- 申請(納稅義務)人姓名 -->
+                      <!-- 涉嫌逃漏國稅項目 -->
                       <div class="form_grp">
-                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>申請(納稅義務)人姓名</label>
+                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr> 涉嫌逃漏國稅項目</label>
                         <div class="form_content">
-                          <input name="" id="" type="text" placeholder="請輸入申請(納稅義務)人姓名">
-                          <div class="notice_error">格式錯誤，請重新輸入。
-                            <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                          </div>
+                          <a href="">短漏開發票、未辦理營業登記、虛報員工薪資、漏報租金所得…等</a>
                         </div>
                       </div>
-                      <!-- 身分證統一編號 -->
+                      <!-- 意見反應類別 -->
                       <div class="form_grp">
-                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>身分證統一編號</label>
+                        <label for="" class="form_title">涉嫌逃漏地方稅項目</label>
                         <div class="form_content">
-                          <input name="" id="" type="text" placeholder="請輸入身分證統一編號">
-                          <div class="notice_info">注意事項。
-                            <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                          <div class="radio_grp form_inline">
+                            <label><input type="radio" name="sampleRadio5" value="" checked="">地價稅</label>
+                            <label><input type="radio" name="sampleRadio5" value="">土地增值稅</label>
+                            <label><input type="radio" name="sampleRadio5" value="">房屋稅</label>
+                            <label><input type="radio" name="sampleRadio5" value="">契稅</label>
+                            <label><input type="radio" name="sampleRadio5" value="">使用牌照稅</label>
+                            <label><input type="radio" name="sampleRadio5" value="">印花稅</label>
+                            <label><input type="radio" name="sampleRadio5" value="">娛樂稅</label>
                           </div>
-                          <div class="notice_error">格式錯誤，請重新輸入。
-                            <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                          </div>
-
                         </div>
                       </div>
-                      <!-- E-mail電子信箱 -->
+                    </div>
+                  </div>
+                  <h3>填寫人資訊</h3>
+                  <div class="shadowOut">
+                    <div class="form_group">
+                      <!-- 檢舉人 -->
                       <div class="form_grp">
-                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>E-mail電子信箱</label>
+                        <label for="" class="form_title">檢舉人</label>
                         <div class="form_content">
-                          <input name="" id="" type="text" placeholder="111222@gmail.com" readonly>
-
-                          <div class="notice_info">同一組E-mail限5分鐘後可重新發送驗證碼。
-                            <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                          <!-- 姓名 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>姓名</label>
+                            <div class="form_content">
+                              <input name="" id="" type="text" placeholder="請輸入姓名">
+                              <div class="notice_error">格式錯誤，請重新輸入。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
+                            </div>
                           </div>
-                          <div class="notice_error">E-mail格式錯誤，請重新輸入。
-                            <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                          <!-- 身分證統一編號 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>身分證統一編號</label>
+                            <div class="form_content">
+                              <input name="" id="" type="text" placeholder="請輸入身分證統一編號">
+                              <div class="notice_info">注意事項。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
+                              <div class="notice_error">格式錯誤，請重新輸入。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <!-- 房屋坐落地址 -->
-                      <div class="form_grp">
-                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>房屋坐落地址</label>
-                        <div class="form_content form_col-2-2-8">
-                          <select name="" id="">
-                            <option value="">中正區</option>
-                            <option value="">七堵區</option>
-                            <option value="">暖暖區</option>
-                            <option value="">仁愛區</option>
-                            <option value="">中山區</option>
-                            <option value="">安樂區</option>
-                            <option value="">信義區</option>
-                          </select>
-                          <input name="username" type="text" placeholder="請輸入地址">
-                        </div>
-                      </div>
-                      <!-- 通訊地址 -->
-                      <div class="form_grp">
-                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>通訊地址</label>
-                        <div class="form_content form_col-2-2-8">
-                          <select name="" id="">
+                          <!-- E-mail電子信箱 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title">E-mail電子信箱</label>
+                            <div class="form_content">
+                              <input name="" id="" type="text" placeholder="111222@gmail.com" readonly>
+                            </div>
+                          </div>
+                          <!-- 聯絡電話 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>聯絡電話</label>
+                            <div class="form_content">
+                              <div class="form_grp">
+                                <label for="" class="form_title">行動電話</label>
+                                <div class="form_content form_inline tel">
+                                  <input name="" type="tel" value="" placeholder="886">
+                                  <input name="" type="tel" value="" placeholder="12345678"><span>(例：0968123456)</span>
+                                </div>
+                              </div>
+                              <div class="form_grp">
+                                <label for="" class="form_title">市內電話</label>
+                                <div class="form_content form_inline tel">
+                                  <input name="" type="tel" value="" placeholder="886">
+                                  <input name="" type="tel" value="" placeholder="12345678"><span>(例：02-12345678)</span>
+                                </div>
+                              </div>
+                              <div class="notice_info">至少需填寫一組聯絡電話。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
+                              <div class="notice_error">格式錯誤，請重新輸入。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 通訊地址 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>通訊地址</label>
+                            <div class="form_content form_col-2-2-8">
+                              <select name="" id="">
                             <option value="">台北市</option>
                             <option value="">新北市</option>
                             <option value="">桃園市</option>
                             <option value="">新竹市</option>
                             <option value="">...</option>
                           </select>
-                          <select name="" id="">
+                              <select name="" id="">
                             <option value="">中正區</option>
                             <option value="">大安區</option>
                             <option value="">信義區</option>
                             <option value="">北投區</option>
                             <option value="">...</option>
                           </select>
-                          <input name="username" type="text" placeholder="請輸入地址">
+                              <input name="username" type="text" placeholder="請輸入地址">
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <!-- 聯絡電話 -->
+                      <!-- 被檢舉人 -->
                       <div class="form_grp">
-                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>聯絡電話</label>
+                        <label for="" class="form_title">被檢舉人</label>
                         <div class="form_content">
+                          <!-- 姓名 -->
                           <div class="form_grp">
-                            <label for="" class="form_title">行動電話</label>
-                            <div class="form_content form_inline tel">
-                              <input name="" type="tel" value="" placeholder="886">
-                              <input name="" type="tel" value="" placeholder="12345678"><span>(例：0968123456)</span>
+                            <label for="" class="form_title">姓名</label>
+                            <div class="form_content">
+                              <input name="" id="" type="text" placeholder="請輸入姓名">
+                              <div class="notice_error">格式錯誤，請重新輸入。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
                             </div>
                           </div>
+                          <!-- 身分證統一編號 -->
                           <div class="form_grp">
-                            <label for="" class="form_title">市內電話</label>
-                            <div class="form_content form_inline tel">
-                              <input name="" type="tel" value="" placeholder="886">
-                              <input name="" type="tel" value="" placeholder="12345678"><span>(例：02-12345678)</span>
+                            <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>身分證統一編號</label>
+                            <div class="form_content">
+                              <input name="" id="" type="text" placeholder="請輸入身分證統一編號">
+                              <div class="notice_info">注意事項。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
+                              <div class="notice_error">格式錯誤，請重新輸入。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
                             </div>
                           </div>
-                          <div class="notice_info">至少需填寫一組聯絡電話。
-                            <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                          <!-- E-mail電子信箱 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title">E-mail電子信箱</label>
+                            <div class="form_content">
+                              <input name="" id="" type="text" placeholder="111222@gmail.com" readonly>
+                            </div>
                           </div>
-                          <div class="notice_error">格式錯誤，請重新輸入。
+                          <!-- 聯絡電話 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title">聯絡電話</label>
+                            <div class="form_content">
+                              <div class="form_grp">
+                                <label for="" class="form_title">行動電話</label>
+                                <div class="form_content form_inline tel">
+                                  <input name="" type="tel" value="" placeholder="886">
+                                  <input name="" type="tel" value="" placeholder="12345678"><span>(例：0968123456)</span>
+                                </div>
+                              </div>
+                              <div class="form_grp">
+                                <label for="" class="form_title">市內電話</label>
+                                <div class="form_content form_inline tel">
+                                  <input name="" type="tel" value="" placeholder="886">
+                                  <input name="" type="tel" value="" placeholder="12345678"><span>(例：02-12345678)</span>
+                                </div>
+                              </div>
+                              <div class="notice_info">至少需填寫一組聯絡電話。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
+                              <div class="notice_error">格式錯誤，請重新輸入。
+                                <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 通訊地址 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title">通訊地址</label>
+                            <div class="form_content form_col-2-2-8">
+                              <select name="" id="">
+                            <option value="">台北市</option>
+                            <option value="">新北市</option>
+                            <option value="">桃園市</option>
+                            <option value="">新竹市</option>
+                            <option value="">...</option>
+                          </select>
+                              <select name="" id="">
+                            <option value="">中正區</option>
+                            <option value="">大安區</option>
+                            <option value="">信義區</option>
+                            <option value="">北投區</option>
+                            <option value="">...</option>
+                          </select>
+                              <input name="username" type="text" placeholder="請輸入地址">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h3>檢舉內容</h3>
+                  <div class="shadowOut">
+                    <div class="form_group">
+                      <!-- 檢舉主題 -->
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>檢舉主題</label>
+                        <div class="form_content">
+                          <input name="" id="" type="text" placeholder="請輸入檢舉主題">
+                        </div>
+                      </div>
+                      <!-- 逃漏稅事實 -->
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>逃漏稅事實</label>
+                        <div class="form_content">
+                          <textarea name="" id="address" cols="30" rows="10" placeholder="請輸入逃漏稅事實"></textarea>
+                          <div class="notice_info">逃漏稅事實最多可填寫2000字。
                             <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <h3>檔案上傳</h3>
+                  <div class="shadowOut">
+                    <div class="form_group">
                       <!-- 附件上傳 -->
                       <div class="form_grp">
-                        <label for="" class="form_title">附件上傳</label>
+                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>附件上傳</label>
                         <div class="form_content">
+                          <p class="hint">存款人印鑑章或簽名（請以掃描或照相的方式上傳，未上傳則視為未申請）</p>
                           <input name="" type="text" value="" placeholder="請選擇檔案" class="wauto">
                           <a href="" class="upload">上傳檔案</a>
                           <div class="file_list">
@@ -454,16 +571,11 @@
                           </div>
                         </div>
                       </div>
-                      <!-- 回覆方式 -->
-                      <div class="form_grp">
-                        <label for="" class="form_title"><abbr class="necessary" title=“為必填欄位,不能為空白。“>必填</abbr>回覆方式</label>
-                        <div class="form_content">
-                          <div class="radio_grp form_inline">
-                            <label><input type="radio" name="sampleRadio5" value="" checked="">紙本回覆</label>
-                            <label><input type="radio" name="sampleRadio5" value="">線上回覆</label>
-                          </div>
-                        </div>
-                      </div>
+                    </div>
+                  </div>
+                  <h3>驗證碼</h3>
+                  <div class="shadowOut">
+                    <div class="form_group">
                       <!-- 驗證碼 -->
                       <div class="form_grp">
                         <label class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>驗證碼</label>

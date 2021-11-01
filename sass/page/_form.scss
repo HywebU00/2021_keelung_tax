@@ -16,6 +16,7 @@ a.play {
   transition: all .5s;
   position: relative;
   background: #fff;
+  text-decoration: none!important;
   &:before {
     content: "";
     width: 16px;
@@ -41,9 +42,14 @@ a.play {
 //     margin-left: 0;
 //   }
 // }
+a.send {
+  padding: 0 1.5em 0 3.5em;
+}
+
 a.send:before {
   background: url(../images/basic/icon_send.png) no-repeat 0 0;
   background-size: contain;
+  width: 30px;
 }
 
 a.upload:before {
@@ -154,7 +160,7 @@ a.play:before {
 
 .noticeTxt {
   padding: 2em;
-  background: #444;
+  background: #555;
   color: #fff;
   border-radius: 12px;
   line-height: 170%;
@@ -162,6 +168,9 @@ a.play:before {
   margin-bottom: 2em;
   @include screen('mobile') {
     padding: 1.5rem
+  }
+  &:before {
+    display: none;
   }
   h3 {
     margin-top: 0;
@@ -188,11 +197,13 @@ a.play:before {
     color: $color-yellow;
     text-align: justify;
   }
-  ul {
+  ul,
+  ol {
     margin-top: 0;
+    padding: 0 0 10px 20px;
   }
   .aware {
-    background: #666;
+    background: #333;
     color: #fff;
     padding: 1rem;
     border-radius: 7px;
@@ -217,11 +228,22 @@ a.play:before {
         list-style-type: disc;
       }
     }
+    ~.aware {
+      margin-top: 1rem;
+    }
   }
 }
 
 .apply {
   .confirm {
+    padding: 1.5rem 2rem 1rem 2rem;
+    .em {
+      font-weight: bold;
+      color: $secondaryColor;
+    }
+    a {
+      text-decoration: underline;
+    }
     h3,
     h4 {
       padding: 10px 0;
@@ -320,8 +342,12 @@ a.play:before {
           max-width: 100%;
           flex: 0 0 100%;
         }
+        .necessary {
+          line-height: 140%;
+        }
         .form_grp {
-          border-bottom: 1px dashed #ccc!important;
+          // border-bottom: 1px dashed #ccc!important;
+          border-bottom: 0;
           &:last-child {
             border-bottom: 0!important;
           }
@@ -380,6 +406,20 @@ a.play:before {
             }
           }
         }
+        .check_grp,
+        .radio_grp {
+          label {
+            white-space: nowrap;
+            input {
+              margin-left: 8px;
+              width: auto;
+            }
+            input[type="checkbox"],
+            input[type="radio"] {
+              width: 1em;
+            }
+          }
+        }
         .check_grp.form_inline {
           label {
             margin-right: 1em;
@@ -433,6 +473,17 @@ a.play:before {
               }
             }
           }
+        }
+      }
+      .innerform {
+        width: 100%;
+        padding: .5rem;
+        background: #eee;
+        margin: 8px 0;
+        border-radius: 4px;
+        .form_content {
+          max-width: 100%;
+          flex: 0 0 100%;
         }
       }
     }

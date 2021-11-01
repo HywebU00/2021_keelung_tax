@@ -28,6 +28,7 @@ h2.title {
       text-align: center;
       display: block;
       font-size: 0.938em;
+      color: #444;
     }
     @include screen('mobile') {
       float: none;
@@ -36,6 +37,10 @@ h2.title {
       margin: 0px auto;
       display: block;
       margin-bottom: 0.5em;
+    }
+    a:hover,
+    a:hover {
+      color: $primaryColor;
     }
   }
   table {
