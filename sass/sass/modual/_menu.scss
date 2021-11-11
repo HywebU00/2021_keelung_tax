@@ -18,9 +18,10 @@
   }
   // 預設選單 ul
   >ul {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style-type: none;
+    max-width: 1000px;
   }
   ul {
     li {
@@ -54,7 +55,7 @@
   display: none;
   background: rgba(0, 132, 112, 0.95);
   padding: 3rem;
-  z-index: 100;
+  z-index: 10000;
   overflow-y: scroll;
   position: fixed;
   left: 0;

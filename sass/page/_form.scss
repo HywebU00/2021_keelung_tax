@@ -1,7 +1,8 @@
 a.send,
 a.upload,
 a.refresh,
-a.play {
+a.play,
+a.deletefile {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -64,6 +65,11 @@ a.refresh:before {
 
 a.play:before {
   background: url(../images/basic/icon_play.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+a.deletefile:before {
+  background: url(../images/icon/icon_trash.svg) no-repeat 0 0;
   background-size: contain;
 }
 
@@ -155,6 +161,12 @@ a.play:before {
         }
       }
     }
+  }
+}
+
+.form_col-2-2-8 {
+  .notice_info {
+    width: 100%;
   }
 }
 
@@ -409,7 +421,6 @@ a.play:before {
         .check_grp,
         .radio_grp {
           label {
-            white-space: nowrap;
             input {
               margin-left: 8px;
               width: auto;

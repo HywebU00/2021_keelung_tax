@@ -380,7 +380,7 @@ body {
 }
 
 .dfBDQI {
-  display: none;
+  display: none!important;
 }
 
 @include screen('tablet') {

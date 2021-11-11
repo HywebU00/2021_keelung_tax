@@ -21,6 +21,7 @@
     flex-shrink: 1;
     flex-basis: 100%;
     color: #767676;
+    white-space: nowrap;
     &:after {
       content: '';
       width: 5px;

@@ -498,7 +498,8 @@
       z-index: 99;
       border-radius: 5px;
       box-sizing: border-box;
-      max-width: 380px;
+      min-width: 380px;
+      width: 40%;
       .form_grp {
         background: transparent;
         padding: 0 0 6px 0;

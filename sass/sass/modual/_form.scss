@@ -784,7 +784,7 @@ select::-ms-expand {
         max-width: calc(50% - 0.6em);
         flex-basis: calc(50% - 0.6em);
       }
-      &:last-child {
+      &:nth-child(3) {
         width: calc(100% / 12 * 8 - 0.6em);
         max-width: calc(100% / 12 * 8 - 0.6em);
         flex-basis: calc(100% / 12 * 8 - 0.6em);
@@ -1156,6 +1156,7 @@ input[type='radio'] {
   height: 1em;
   background-color: #f7f6ee;
   border: 2px solid $color-gray;
+  flex-shrink: 0;
 }
 
 input[type='radio'] {
@@ -1185,15 +1186,15 @@ input[type='radio']:checked {
 }
 
 input[type='radio']:focus {
-  border-color: $form-focus;
-  background-color: $form-focus;
-  box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
+  border-color: lighten($form-focus, 20);
+  background-color: lighten($form-focus, 20);
+  box-shadow: #fff 0 0 0 3px inset, lighten($form-focus, 20) 0 0 0 2px;
 }
 
 input[type='checkbox']:focus {
-  border-color: $form-focus;
-  background-color: $form-focus;
-  box-shadow: $form-focus 0 0 0 2px;
+  border-color: lighten($form-focus, 20);
+  background-color: lighten($form-focus, 20);
+  box-shadow: lighten($form-focus, 20) 0 0 0 2px;
 }
 
 //---------------------------------------------readonly disable -------//
