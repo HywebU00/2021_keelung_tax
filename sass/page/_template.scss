@@ -399,3 +399,26 @@ body {
     padding: 1.5em 1em 1em;
   }
 }
+
+a.survey_icon1,
+a.survey_icon2,
+a.survey_icon3 {
+  line-height: 36px;
+  padding: 0 .5em;
+  // background: #008470 url(../images/mp/icon_search_.svg) no-repeat 16 px center;
+  // background-size: 16 px;
+  color: #fff;
+  display: block;
+  border-radius: 6px;
+  transition: all .5s;
+  font-weight: normal;
+  border: 0;
+}
+
+a.survey_icon2 {
+  background: $primaryColor;
+}
+
+a.survey_icon3 {
+  background: $secondaryColor;
+}
