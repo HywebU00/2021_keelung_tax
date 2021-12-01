@@ -202,7 +202,7 @@ $(function() {
   _window.on('resize', function(event) {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
-      // search_mode = true;
+      $(".search").hide()
       $('.m_search').hide();
       mobileMenu();
     }, 50);
@@ -250,8 +250,12 @@ $(function() {
 
   $(".searchSwitch").click(function(e) {
     $(".search").slideToggle();
+    $('.search').find('input[type="text"]').focus();
     e.preventDefault();
   });
+  // search設定
+
+
 
   // search設定
   var search_mode = false;

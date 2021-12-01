@@ -338,8 +338,8 @@ a.deletefile:before {
         border-bottom: 0;
       }
       .form_title {
-        max-width: 22%;
-        flex: 0 0 22%;
+        max-width: 23%;
+        flex: 0 0 23%;
         @include screen('mobile') {
           width: 100%;
           max-width: 100%;
@@ -347,8 +347,8 @@ a.deletefile:before {
         }
       }
       .form_content {
-        max-width: 78%;
-        flex: 0 0 78%;
+        max-width: 77%;
+        flex: 0 0 77%;
         @include screen('mobile') {
           width: 100%;
           max-width: 100%;
@@ -560,5 +560,30 @@ a.deletefile:before {
         }
       }
     }
+  }
+}
+
+h3.arrowTitle {
+  margin: 0;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  color: $primaryColor;
+  font-size: 1.25em;
+  &:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-top: 2px solid $primaryColor;
+    border-right: 2px solid $primaryColor;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    transform: rotate(45deg);
+    z-index: 10;
   }
 }

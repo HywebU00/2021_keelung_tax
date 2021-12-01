@@ -65,83 +65,84 @@ $(function() {
     $carousel.find(".start").removeClass("start");
   }, 0);
   $('.rightSlider').each(function(index) {
-    if(index == 0) {
+    if (index == 0) {
       rightSlider($(this).find('ul'));
       $(this).show();
     } else {
       $(this).hide();
     }
   });
-  $('.leftSlider ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  $('.leftSlider ul').on('afterChange', function(event, slick, currentSlide, nextSlide) {
     var currentIndex = $(this).slick('slickCurrentSlide');
     $('.rightSlider').each(function(index) {
       var item = $(this).find('ul');
-      if(index == currentIndex) {
+      if (index == currentIndex) {
         rightSlider($(item)[0]);
         $(this).show();
       } else {
         $(this).hide();
         try {
           $(item[0]).slick('unslick')
-        } catch(err) {}
+        } catch (err) {}
       }
     });
   });
+
   function rightSlider(obj) {
-      $(obj).slick({
-        mobileFirst: true,
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        arrow: true,
-        lazyLoaded: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease',
-        responsive: [{
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              arrows: true,
-            },
+    $(obj).slick({
+      mobileFirst: true,
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrow: true,
+      lazyLoaded: true,
+      lazyLoad: 'ondemand',
+      ease: 'ease',
+      responsive: [{
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
           },
-          {
-            breakpoint: 919,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              arrows: true,
-            },
+        },
+        {
+          breakpoint: 919,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
           },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              arrows: true,
-            },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true,
           },
-          {
-            breakpoint: 486,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              arrows: true,
-            },
+        },
+        {
+          breakpoint: 486,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
           },
-          {
-            breakpoint: 320,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              arrows: true,
-            },
+        },
+        {
+          breakpoint: 320,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true,
           },
-        ],
-      });
+        },
+      ],
+    });
   }
   // 首頁輪播
   $('.mpSlider').slick({

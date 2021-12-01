@@ -126,48 +126,47 @@
   }
 }
 
-.lp {
-  .list_table {
-    th {
-      border-left: 0;
-      border-right: 0;
-      border-bottom: 3px solid $primaryColor;
-      line-height: 140%;
-      background: #eee;
-      padding: .8em .5em;
-    }
-    td {
-      border-left: 0;
-      border-right: 0;
-      &.date {
-        text-align: center;
-        @include screen('mobile') {
-          text-align: left;
-        }
-      }
-      &.center {
-        text-align: center;
-      }
-      &.left {
+.list_table {
+  th {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 3px solid $primaryColor;
+    line-height: 140%;
+    background: #eee;
+    padding: .8em .5em;
+  }
+  td {
+    border-left: 0;
+    border-right: 0;
+    &.date {
+      text-align: center;
+      @include screen('mobile') {
         text-align: left;
       }
-      &.num {
-        text-align: center;
-        color: #666;
-        @include screen('mobile') {
-          text-align: left;
-        }
-      }
     }
-  }
-  .applyTable {
-    td {
+    &.center {
       text-align: center;
+    }
+    &.left {
+      text-align: left;
+    }
+    &.num {
+      text-align: center;
+      color: #666;
+      @include screen('mobile') {
+        text-align: left;
+      }
     }
   }
 }
 
-.lp .list_album {
+.applyTable {
+  td {
+    text-align: center;
+  }
+}
+
+.list_album {
   margin: 1em auto;
   ul {
     @include li-reset;
@@ -256,7 +255,7 @@
   }
 }
 
-.lp .list_album2 {
+.list_album2 {
   margin: 1em auto;
   ul {
     @include li-reset;
@@ -332,7 +331,7 @@
   }
 }
 
-.lp .list_qa {
+.list_qa {
   overflow: hidden;
   >ul {
     @include li-reset;
@@ -465,7 +464,7 @@
   }
 }
 
-.lp .list_calendar {
+.list_calendar {
   // border-top: 3px solid $primaryColor;
   >ul {
     @include li-reset;
