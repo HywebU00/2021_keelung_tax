@@ -145,9 +145,25 @@ $(function() {
     });
   }
   // 首頁輪播
-  $('.mpSlider').slick({
+  $('.mpSlider,.collectSlider').slick({
     mobileFirst: true,
     dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    fade: true,
+    lazyLoaded: true,
+    lazyLoad: 'ondemand',
+    ease: 'ease',
+    customPaging: function(slider, i) {
+      var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+      return $('<button type="button" aria-label="' + title + '"/>').text(title);
+    },
+  });
+  $('.collectVideo').slick({
+    mobileFirst: true,
+    dots: false,
     arrows: true,
     infinite: true,
     speed: 500,
