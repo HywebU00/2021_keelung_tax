@@ -756,12 +756,18 @@ h2.blockTitle {
           margin: 0;
           border-bottom: 1px #e2e2e2 solid;
           font-weight: bold;
+          display: flex;
           time {
             font-size: 1rem;
             margin-right: 2rem;
             color: #666;
+            flex: 0 0 auto;
           }
           a {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
             &:hover,
             &:focus {
               color: $secondaryColor;
