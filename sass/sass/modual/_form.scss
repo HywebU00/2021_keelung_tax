@@ -883,6 +883,7 @@ select::-ms-expand {
       flex-basis: 100%;
       display: flex;
       align-items: center;
+      line-height: 2rem;
       input {
         &:checked {
           &~span {
@@ -900,6 +901,9 @@ select::-ms-expand {
             }
           }
         }
+      }
+      select {
+        margin: 0 .3em;
       }
     }
     // radio與check個別行內設定

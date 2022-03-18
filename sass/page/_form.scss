@@ -214,6 +214,14 @@ a.deletefile:before {
     margin-top: 0;
     padding: 0 0 10px 20px;
   }
+  a {
+    color: $color-yellow;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
   .aware {
     background: #333;
     color: #fff;
@@ -229,6 +237,10 @@ a.deletefile:before {
     a {
       color: $color-yellow;
       text-decoration: underline;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
     }
     ol,
     ul {
@@ -495,6 +507,11 @@ a.deletefile:before {
         .form_content {
           max-width: 100%;
           flex: 0 0 100%;
+          &.form_inline {
+            input {
+              flex: 1 1 auto;
+            }
+          }
         }
       }
     }
