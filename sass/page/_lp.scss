@@ -46,6 +46,7 @@
     ul {
       @include li-reset;
       display: inline-block;
+      margin-bottom: 1rem;
       li {
         display: inline-block;
         margin-right: 1rem;
@@ -121,6 +122,9 @@
       .list_dep {
         display: inline-block;
         margin-left: .5em;
+        a {
+          color: #fff;
+        }
       }
     }
   }
@@ -157,12 +161,52 @@
         text-align: left;
       }
     }
+    &.mail {
+      color: $primaryColor;
+    }
+    span {
+      font-size: .9375rem;
+      color: #fff;
+      padding: .2rem .8rem;
+      border-radius: 5px;
+      display: inline-block;
+      &.processing {
+        background: $color-green;
+      }
+      &.processed {
+        background: #666;
+      }
+      &.overdue {
+        background: $importantColor;
+      }
+    }
   }
 }
 
 .applyTable {
   td {
     text-align: center;
+    padding: .1rem .5rem;
+    ol,
+    ul {
+      li {
+        text-align: left;
+        margin-bottom: 8px;
+        a {
+          padding: .2rem .5rem;
+          border: 1px solid $primaryColor;
+          display: inline-block;
+          margin-right: 8px;
+          border-radius: 4px;
+          margin-bottom: 4px;
+          &:hover,
+          &:focus {
+            background: $primaryColor;
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }
 

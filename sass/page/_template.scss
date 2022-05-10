@@ -118,6 +118,7 @@ body {
     display: flex;
     @include screen('mobile') {
       padding-top: 1em;
+      @include gutter(40px);
     }
   }
   .center_block {
@@ -170,6 +171,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .4);
     overflow: hidden;
+    margin-bottom: 1rem;
+    padding-bottom: 8px;
     .left_title {
       background: $secondaryColor;
       padding: .7em 1em;
@@ -299,6 +302,52 @@ body {
               &:focus {
                 color: $leftmenuColor;
                 box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.recipt {
+      .left_title {}
+      >ul {
+        >li {
+          >a {
+            padding: 0.6em 1em;
+            &:before {
+              display: none;
+            }
+            &:hover {}
+            &.active {
+              &:hover {}
+            }
+          }
+        }
+      }
+    }
+    &.member {
+      background: #555;
+      .left_title {
+        background: $primaryColor;
+        color: #fff;
+      }
+      >ul {
+        >li {
+          >a {
+            color: #fff;
+            padding: 0.6em 1em;
+            &:before {
+              display: none;
+            }
+            &:hover {
+              color: #444;
+            }
+            &.active {
+              color: #444;
+              background: #bbb;
+              &:hover {
+                color: #fff;
+                background: $primaryColor;
               }
             }
           }
@@ -864,6 +913,347 @@ a.survey_icon3 {
             img {}
           }
         }
+      }
+    }
+  }
+}
+
+.recipt_text {
+  padding: .5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  color: #fff;
+  background: #555;
+  ul,
+  ol {
+    padding-left: 20px;
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  em {
+    color: $lightColor;
+    font-style: normal;
+  }
+  dl {
+    dt {
+      font-weight: bold;
+      color: $primaryColor;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+    dd {
+      margin: 0 0 .6rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  .aware {
+    font-size: .9375rem;
+    margin-bottom: .5rem;
+    .title {
+      font-weight: bold;
+      letter-spacing: 1px;
+      &:before {
+        content: "";
+        width: 8px;
+        height: 16px;
+        display: inline-block;
+        border-radius: 30px;
+        background: $secondaryColor;
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+    }
+    ul,
+    ol {
+      padding-left: 20px;
+    }
+  }
+}
+
+.receipt_hint {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  @include screen('mobile') {
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  >div {
+    width: 48%;
+    text-align: center;
+    padding: 1.125rem 2rem;
+    border-radius: 8px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    // box-shadow: 0 0 5px 0 rgba(0, 0, 0, 40%);
+    &:only-child {
+      width: 100%;
+    }
+    @include screen('mobile') {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    button {
+      display: block;
+      margin: 1rem auto 0;
+      color: #fff;
+      font-weight: bold;
+      &:hover,
+      &:focus {
+        background: #444;
+        border: 1px solid #444;
+        color: #fff;
+      }
+    }
+    span {
+      font-size: 2rem;
+    }
+  }
+  .shadowOut {
+    background: #fff;
+    margin-bottom: 0;
+    @include screen('mobile') {
+      margin-bottom: 1rem;
+    }
+    .title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      padding-bottom: 10px;
+      position: relative;
+      &:after {
+        content: "";
+        width: 100px;
+        height: 3px;
+        display: block;
+        background: $primaryColor;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -50px;
+      }
+    }
+    ol {
+      list-style: none;
+      padding: 0;
+      li {
+        margin: 4px 0;
+        span {
+          font-size: 1.5rem;
+          margin: 0 6px;
+          font-weight: bold;
+          color: $secondaryColor;
+        }
+      }
+    }
+    .btn {
+      background: $secondaryColor;
+      border: 1px solid $secondaryColor;
+      &:hover,
+      &:focus {
+        background: $primaryColor;
+        border: 1px solid $primaryColor;
+      }
+    }
+  }
+  .receipt {}
+  .save_receipt {
+    span {
+      color: $primaryColor;
+    }
+    button {
+      background: $primaryColor;
+      border: 1px solid $primaryColor;
+    }
+  }
+  .gift {
+    span {
+      color: $secondaryColor;
+    }
+    button {
+      background: $secondaryColor;
+      border: 1px solid $secondaryColor;
+      @include screen('mobile') {
+        padding: 0.5em;
+      }
+    }
+  }
+  .receipt_number {
+    span {
+      font-weight: bold;
+      color: $secondaryColor;
+    }
+    &.alert {
+      background: $secondaryColor;
+      color: #fff;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+$m-gutter: 16px;
+%flex_set {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.gift_list {
+  @extend %flex_set;
+  .list_block {
+    @include flex-xs-equal(1, 0px);
+    @include flex-sm-equal(2, $m-gutter);
+    @include flex-md-equal(3, $m-gutter);
+    @include flex-lg-equal(3, $m-gutter);
+    // @include gutter();
+    .list_pic {
+      margin-bottom: 8px;
+      &.out {
+        &::after {
+          content: "兌換完畢";
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, .3);
+          color: #fff;
+        }
+      }
+    }
+    .list_text {
+      .list_title {
+        font-weight: bold;
+        @include text-line(2, 1.6rem);
+        margin-bottom: 8px;
+        color: $primaryColor;
+      }
+      .gift_n {
+        span {
+          font-weight: bold;
+        }
+      }
+      .receipt_n {
+        span {
+          font-weight: bold;
+          color: $secondaryColor;
+        }
+      }
+      .receipt_h {
+        padding: 0.4em 1rem;
+        margin: 0.5em 0.1em;
+        background: $linkColor;
+        border-radius: 30px;
+        display: inline-block;
+        color: #fff;
+      }
+      .form_grp {
+        label {
+          margin-right: 0;
+          padding-left: 0;
+        }
+        select {}
+        .btn {
+          padding: 0.5em;
+          @include btn_setting($secondaryColor, #FFF);
+          &[disabled] {
+            @include btn_setting(#555, #FFF)
+          }
+        }
+      }
+    }
+  }
+}
+
+.gift_table {
+  margin-bottom: 1rem;
+  th,
+  td {
+    border-left: 0;
+    border-right: 0;
+  }
+  tr:last-child {
+    td {
+      border-top: #444 2px solid;
+      border-bottom: #444 2px solid;
+      font-weight: bold;
+      &:nth-last-child(2) {
+        color: $secondaryColor;
+      }
+    }
+  }
+}
+
+.sp {
+  h4 {
+    margin: 0;
+    margin-bottom: .5rem;
+    position: relative;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    color: $primaryColor;
+    font-size: 1.25em;
+  }
+  .table_notice {
+    color: $secondaryColor;
+    margin-bottom: .5rem;
+  }
+}
+
+.donate {
+  text-align: center;
+  .btn {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    background: $secondaryColor;
+    border: 1px solid $secondaryColor;
+    color: #fff;
+    &:hover,
+    &:focus {
+      background: $primaryColor;
+      border: 1px solid $primaryColor;
+    }
+  }
+}
+
+.donate_hint {
+  text-align: center;
+  font-weight: bold;
+  color: $secondaryColor;
+  font-size: 1.125rem;
+}
+
+.receipt_img {
+  @extend %flex_set;
+  .pic_block {
+    @include flex-xs-equal(1, 0px);
+    @include flex-sm-equal(2, $m-gutter);
+    @include flex-md-equal(2, $m-gutter);
+    @include flex-lg-equal(2, $m-gutter);
+    padding: 1rem;
+    .title {
+      margin-bottom: 1rem;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+      background: #444;
+      padding: .8rem;
+      border-radius: 4px;
+    }
+    .pic {
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }

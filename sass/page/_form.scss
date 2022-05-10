@@ -414,7 +414,7 @@ a.deletefile:before {
           @include screen('mobile') {
             width: 100%;
             max-width: 100%;
-            flex: 0 0 100%;
+            // flex: 0 0 100%;
           }
         }
         select,
@@ -516,7 +516,7 @@ a.deletefile:before {
       }
     }
     .btn_grp {
-      margin: 0;
+      margin: 0 0 2rem 0;
       padding: 0;
       display: block;
     }
@@ -602,5 +602,34 @@ h3.arrowTitle {
     top: 7px;
     transform: rotate(45deg);
     z-index: 10;
+  }
+  .btn {
+    font-size: 1rem;
+    background: $primaryColor;
+    color: #fff;
+    border: 1px solid $primaryColor;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    margin: 0;
+  }
+}
+
+.upload {
+  ol,
+  ul {
+    padding-left: 24px;
+    color: $secondaryColor;
+  }
+  .form_title {}
+  .form_content {
+    display: flex;
+    input {
+      flex: 1 1 auto;
+    }
+    a.upload {
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
   }
 }

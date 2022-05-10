@@ -175,3 +175,26 @@ other;
     }
   }
 }
+
+.icon_delete {
+  font-size: 0;
+  display: inline-block;
+  &:before {
+    content: "";
+    background: url(../images/basic/icon_delete.png) no-repeat center center;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    background-size: contain;
+    display: inline-block;
+    opacity: .5;
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      opacity: .8;
+    }
+  }
+}

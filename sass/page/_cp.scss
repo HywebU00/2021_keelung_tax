@@ -9,6 +9,10 @@ h2.title {
 
 // .tt{ color: #222; }
 .cp {
+  h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
   .pic {
     float: left;
     margin: 0px 1em 1em 0;
@@ -369,6 +373,48 @@ h3.cpTitle {
     @include screen('mobile') {
       padding: 10px 20px;
       background: #f1f1f1;
+    }
+  }
+}
+
+.web_apply {
+  ul,
+  ol {
+    counter-reset: counter;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+    border-bottom: 1px solid #ddd;
+    clear: both;
+    overflow: hidden;
+    padding-bottom: .5em;
+    &:before {
+      position: absolute;
+      top: .6em;
+      left: .5em;
+      text-align: right;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #999;
+      content: "";
+    }
+    a {
+      padding: .2rem .5rem;
+      border: 1px solid $primaryColor;
+      display: inline-block;
+      margin: 0 8px 4px 8px;
+      border-radius: 4px;
+      &:hover,
+      &:focus {
+        background: $primaryColor;
+        color: #fff;
+      }
     }
   }
 }

@@ -9,7 +9,7 @@
   <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
-    <![endif]-->
+  <![endif]-->
   <!-- slick css-->
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
@@ -225,37 +225,44 @@
       <!-- 內頁新增一個classname-->
       <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
       <div class="container">
+        <!-- left_block -->
+        <div class="left_block">
+          <nav class="receipt">
+            <h2 class="left_title">雲端發票專區</h2>
+            <ul>
+              <li><a href="#">雲端發票專區</a></li>
+              <li><a href="#">存發票換好禮</a></li>
+              <li><a href="#" class="active">捐發票換好禮</a></li>
+              <li><a href="#">載具歸戶</a></li>
+              <li><a href="#">領獎設定</a></li>
+              <li><a href="#">統一發票兌獎APP及小工具截圖</a></li>
+              <li><a href="#">行動支付截圖</a></li>
+              <li><a href="#">常見問答</a></li>
+            </ul>
+          </nav>
+          <nav class="member">
+            <h2 class="left_title">會員資料</h2>
+            <ul>
+              <li><a href="#">個人資料</a></li>
+              <li><a href="#">兌換紀錄</a></li>
+              <li><a href="#" class="active">捐贈紀錄</a></li>
+              <li><a href="#">登出</a></li>
+            </ul>
+          </nav>
+        </div>
         <!-- 主要內容區 -->
         <div class="center_block">
           <!-- breadcrumb路徑 -->
           <div class="breadcrumb">
             <ul>
               <li><a href="#">首頁</a></li>
-              <li><a href="#">節點</a></li>
-              <li>節點</li>
+              <li><a href="#">雲端發票專區</a></li>
+              <li>存發票換好禮</li>
             </ul>
           </div>
-          <h2 class="title">線上申辦及表單下載</h2>
+          <h2 class="title">存發票換好禮</h2>
           <!-- function_panel -->
           <div class="function_panel">
-            <!-- adSearch -->
-            <div class="adSearch">
-              <div class="adSearch_btn"><a href="">顯示查詢條件</a></div>
-              <div class="adSearch_form">
-                <form action="" class="flex-form form_grid">
-                  <div class="form_grp">
-                    <label for="username" class="form_title">申辦項目</label>
-                    <div class="form_content">
-                      <input type="text" id="username" value="">
-                    </div>
-                  </div>
-                  <div class="btn_grp form_inline">
-                    <button class="btn btn-reset">清除</button>
-                    <button class="btn btn-submit">送出</button>
-                  </div>
-                </form>
-              </div>
-            </div>
             <!-- function功能區塊 -->
             <div class="function">
               <ul>
@@ -297,251 +304,104 @@
               </ul>
             </div>
           </div>
-          <!-- top_text -->
-          <div class="top_text">
-            <dl>
-              <dt>1.本局網站線上申辦：</dt>
-              <dd>主要提供一般稅務申辦服務，免憑證，需檢附的身份資料等以附件夾檔上傳，大部分申請可以選擇以紙本或電子方式擇一回復。</dd>
-              <dt>2.電子稅務文件入口網：</dt>
-              <dd>主要提供一般稅務申辦服務，需以申請人的自然人憑證、工商憑證或已註冊的健保卡申請，上網申辦成功後約1小時即時線上取得電子文件。</dd>
-              <dt>3.稅務入口網：</dt>
-              <dd>主要提供一般稅務申辦服務，需以申請人的自然人憑證、工商憑證或已註冊的健保卡申辦，機關以紙本公文回覆。</dd>
-              <dt>4.地方稅網路申報：</dt>
-              <dd>主要提供不動產過戶申報、定期開徵查繳稅及電子傳送服務等，需以申請人的自然人憑證、工商憑證，已註冊的健保卡或行動憑證 TW-FidO申辦。</dd>
-            </dl>
-
-            <div class="tip">申辦後可至<a href="">「申辦案件(民意案件)進度查詢」</a>查詢案件申辦進度。</div>
-            <div class="tableicon">
-              圖示說明：
+          <!-- SP Start -->
+          <section class="sp">
+            <!-- recipt_text -->
+            <div class="noticeTxt">
               <ul>
-                <li><span class="icon_file"></span>申辦說明及表單下載</li>
-                <li><span class="icon_safe"></span>免憑證申辦</li>
-                <li><span class="icon_safe_"></span>需憑證申辦</li>
+                <li>活動時間：2022/02/01~2022/03/24</li>
+                <li>有效發票日期：2022/01/01~2022/02/28</li>
+                <li>宣導品兌換期限：2022/12/31</li>
+                <li>活動洽詢窗口：納稅服務科(02)24331888轉分機117、111。</li>
               </ul>
+              <div class="aware">
+                <div class="title">注意事項：</div>
+                <ol>
+                  <li><em>已儲存之雲端發票張數，限本次活動期限內有效，請於活動期間內使用完畢，逾期將自動失效歸零，不再另行通知。</em></li>
+                  <li>限儲存於「手機條碼」上之雲端發票，包含已歸戶於手機條碼之其他載具(如會員卡、悠遊卡、icsah卡、信用卡等)。</li>
+                  <li>發票以財政部電子發票整合平台為準；另未達發票金額10元系統將自動排除。</li>
+                  <li>若遇電子發票整合服務平台系統超載或資訊中心系統異常，建議請等候至系統恢復後再行儲存，以免數據遺失。</li>
+                  <li>本活動因故無法進行時，本局有權決定取消、終止、修改或暫停本活動，並保有更換獎品(宣導品)及修改計畫之權利，相關異動將公告於活動平台，不再另行通知。</li>
+                  <li>不得以任何不正當、不實或其他非法方式干擾本活動進行或影響其他會員，違反者本局有權立即取消其會員及兌換資格。</li>
+                </ol>
+              </div>
             </div>
-          </div>
-          <!-- category -->
-          <div class="category">
-            <ul>
-              <li><a href="#">全部</a></li>
-              <li><a href="#" class="active">使用牌照稅</a></li>
-              <li><a href="#">房屋稅</a></li>
-              <li><a href="#">地價稅</a></li>
-              <li><a href="#">土地增值稅</a></li>
-              <li><a href="#">契稅</a></li>
-              <li><a href="#">印花稅</a></li>
-              <li><a href="#">娛樂稅</a></li>
-              <li><a href="#">其他</a></li>
-            </ul>
-          </div>
-          <!-- LP Start -->
-          <section class="lp">
-            <div class="list_table applyTable">
+            <div class="receipt_hint">
+              <div class="save_receipt">
+                已儲存雲端發票共 <span>173</span> 張
+                <button type="button" class="btn">立即同步</button>
+              </div>
+              <div class="gift">
+                未兌領宣導品共 <span>100</span> 張
+                <button type="button" class="btn">兌換宣導品</button>
+              </div>
+            </div>
+            <h3 class="arrowTitle">已儲存雲端發票清單</h3>
+            <div class="list_table">
               <table summary="">
                 <thead>
                   <tr>
-                    <th>項次</th>
-                    <th>申辦項目</th>
-                    <th>申辦說明<br>及表單下載</th>
-                    <th>線上申辦管道</th>
+                    <th>發票號碼</th>
+                    <th>發票金額</th>
+                    <th>發票日期</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-title="項次" class="num">1</td>
-                    <td data-title="申辦項目" class="left">申請補發使用牌照稅繳款書</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          本局線上申辦
-                          <a href="">免用憑證</a>
-                        </li>
-                        <li>
-                          電子稅務文件
-                          <a href="">自然人憑證</a>
-                          <a href="">工商憑證</a>
-                          <a href="">健保卡</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">2</td>
-                    <td data-title="申辦項目" class="left">申請更正使用牌照稅繳款書身分證統一編號</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          電子稅務文件
-                          <a href="">自然人憑證</a>
-                          <a href="">工商憑證</a>
-                          <a href="">健保卡</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">3</td>
-                    <td data-title="申辦項目" class="left">申請更正使用牌照稅繳款書寄送地址</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          稅務入口網
-                          <a href="">自然人憑證</a>
-                          <a href="">工商憑證</a>
-                          <a href="">健保卡</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">4</td>
-                    <td data-title="申辦項目" class="left">申請使用牌照稅身心障礙者免稅</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          稅務入口網
-                          <a href="">免用憑證</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">5</td>
-                    <td data-title="申辦項目" class="left">申請核發房屋稅籍證明</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          本局線上申辦
-                          <a href="">免用憑證</a>
-                        </li>
-                        <li>
-                          電子稅務文件
-                          <a href="">自然人憑證</a>
-                          <a href="">工商憑證</a>
-                          <a href="">健保卡</a>
-                        </li>
-                        <li>
-                          地方稅網路申報
-                          <a href="">需用憑證</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">6</td>
-                    <td data-title="申辦項目" class="left">申請應用稅務機關檔案</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          稅務入口網
-                          <a href="">自然人憑證</a>
-                          <a href="">工商憑證</a>
-                          <a href="">組織及團體憑證</a>
-                          <a href="">健保卡</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">7</td>
-                    <td data-title="申辦項目" class="left">申請開立印花稅大額憑證繳款書</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          本局線上申辦
-                          <a href="">免用憑證</a>
-                        </li>
-                        <li>
-                          地方稅網路申報
-                          <a href="">需用憑證</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">8</td>
-                    <td data-title="申辦項目" class="left">重溢繳退稅輔導直撥通知單線上回覆</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          本局線上申辦
-                          <a href="">免用憑證</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">9</td>
-                    <td data-title="申辦項目" class="left">申請/變更/取消委託轉帳代繳領各項稅款約定</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          本局線上申辦
-                          <a href="">免用憑證</a>
-                        </li>
-                        <li>
-                          稅務入口網
-                          <a href="">自然人憑證</a>
-                          <a href="">工商憑證</a>
-                          <a href="">健保卡</a>
-                          <a href="">外人憑證</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                   <tr>
-                    <td data-title="項次" class="num">10</td>
-                    <td data-title="申辦項目" class="left">因嚴重特殊傳染性肺炎疫情影響申請延期或分期繳納稅捐作業（地方稅）</td>
-                    <td data-title="申辦說明及表單下載">
-                      <a href="" class="icon_file"></a>
-                    </td>
-                    <td data-title="線上申辦管道">
-                      <ul>
-                        <li>
-                          本局線上申辦
-                          <a href="">免用憑證</a>
-                        </li>
-                        <li>
-                          稅務入口網
-                          <a href="">自然人憑證</a>
-                          <a href="">工商憑證</a>
-                          <a href="">健保卡</a>
-                        </li>
-                      </ul>
-                    </td>
+                    <td data-title="發票號碼" class="num">YE04580895</td>
+                    <td data-title="申辦項目" class="center">159</td>
+                    <td data-title="處理時限" class="center">2022/02/21</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </section>
-          <!-- LP End -->
+          <!-- SP End -->
           <!-- Pagination -->
           <div class="pagination">
             <form action="">
