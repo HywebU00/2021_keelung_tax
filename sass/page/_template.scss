@@ -159,6 +159,24 @@ body {
         flex-basis: 100%;
       }
     }
+    .member {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background: url(../images/icon/icon_member.png) no-repeat center center;
+        background-size: cover;
+        opacity: .6;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    }
   }
 }
 
