@@ -1276,3 +1276,80 @@ $m-gutter: 16px;
     }
   }
 }
+
+.shadowOut .form_grp+.btn_grp {
+  margin-bottom: 0!important;
+  margin-top: .5rem!important;
+}
+
+input.calendar+label {
+  margin-right: 0!important;
+}
+
+.shadowOut.result {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .4), 0 0 0 3px $primaryColor inset;
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+    li {
+      margin: 6px 0;
+    }
+  }
+}
+
+.result_tax {
+  color: $primaryColor;
+  font-weight: bold;
+  padding-top: 1rem;
+  border-top: 1px dashed #ddd;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+
+.shadowOut.result {
+  .resultTable1 {
+    margin: 0.8rem 0;
+    th,
+    td {
+      text-align: center;
+      background: transparent;
+      border: 0px;
+    }
+  }
+  .resultTable2 {
+    margin: 1rem 0;
+    td {
+      text-align: center;
+    }
+  }
+}
+
+.formula {
+  h3 {
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #ddd;
+    &:before {
+      content: "";
+      width: 10px;
+      height: 16px;
+      display: inline-block;
+      background: #aaa;
+      border-radius: 15px;
+      margin-left: 4px;
+      margin-right: 1rem;
+      vertical-align: middle;
+    }
+  }
+  ul,
+  ol {
+    li {
+      margin: 6px 0;
+    }
+  }
+}
+
+.form_col-4-4-4 {
+  align-items: flex-start!important;
+}
