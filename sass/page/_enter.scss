@@ -161,28 +161,28 @@
       }
     }
   }
-  &:before {
-    content: "";
-    width: 909px;
-    height: 657px;
-    display: block;
-    background: url(../images/enter/hero_tri1.png) no-repeat 0 0;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 9;
-  }
-  &:after {
-    content: "";
-    width: 877px;
-    height: 385px;
-    display: block;
-    background: url(../images/enter/hero_tri2.png) no-repeat 0 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 10;
-  }
+  // &:before {
+  //   content: "";
+  //   width: 909px;
+  //   height: 657px;
+  //   display: block;
+  //   background: url(../images/enter/hero_tri1.png) no-repeat 0 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   position: absolute;
+  //   z-index: 9;
+  // }
+  // &:after {
+  //   content: "";
+  //   width: 877px;
+  //   height: 385px;
+  //   display: block;
+  //   background: url(../images/enter/hero_tri2.png) no-repeat 0 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   position: absolute;
+  //   z-index: 10;
+  // }
 }
 
 .enter_countdown {
