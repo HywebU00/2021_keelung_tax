@@ -323,4 +323,9 @@ $menuItems: 15;
       }
     }
   }
+  .menu2 {
+    @include screen('mobile') {
+      display: none;
+    }
+  }
 }

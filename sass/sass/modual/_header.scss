@@ -337,6 +337,9 @@
         padding: 0.5em;
         flex: 1 1 50%;
         max-width: 70%;
+        @include screen('mobile') {
+          margin: 0 4px;
+        }
         &[type='submit'] {
           flex: 0 1 15%;
           margin: 0.5em;
@@ -344,14 +347,31 @@
       }
       .btn,
       .btn-search {
+        font-size: 1rem;
         min-width: auto;
         padding: 0.5em 0.8em;
         margin: 0;
         flex: 1 1 20%;
         max-width: 25%;
+        @include screen('mobile') {
+          padding: 0.5rem;
+        }
         &:hover,
         &:focus {
           box-shadow: none !important;
+        }
+      }
+      .btn {
+        @include screen('mobile') {
+          flex: 1 1 15%;
+          margin: 0 4px;
+        }
+        &:last-child {
+          @include screen('mobile') {
+            flex: 1 1 20%;
+            background: #ccc;
+            border: 1px solid #ccc;
+          }
         }
       }
     }
@@ -377,6 +397,10 @@
     }
     .keywordHot {
       flex: 1 1 100%;
+      @include screen('mobile') {
+        color: #fff;
+        margin: .5rem;
+      }
       ul {
         font-size: 0.875em;
         line-height: 1.65em;
@@ -385,11 +409,17 @@
         display: flex;
         justify-content: flex-start;
         list-style-type: none;
+        @include screen('mobile') {
+          padding: 0.5em 0 0 0;
+        }
         &:before {}
         li {
           margin: 0;
           padding: 0.5em;
           flex: 0 0 auto;
+          @include screen('mobile') {
+            padding: 0 0.5rem 0 0;
+          }
         }
         a {
           color: #fff;

@@ -1021,7 +1021,7 @@ h2.blockTitle {
     left: 16%;
     margin-left: 100px;
     @include screen('mobile') {
-      left: 50%;
+      left: 15px;
       margin-left: 0;
     }
   }
@@ -1029,7 +1029,7 @@ h2.blockTitle {
     left: 16%;
     margin-left: 150px;
     @include screen('mobile') {
-      left: 50%;
+      left: 15px;
       margin-left: 50px;
     }
   }
@@ -1041,7 +1041,7 @@ h2.blockTitle {
     font-size: 1.125rem;
     font-family: "Century Gothic", Arial, sans-serif;
     @include screen('mobile') {
-      margin-left: -100px;
+      margin-left: -65px;
       left: 50%;
     }
     span {
