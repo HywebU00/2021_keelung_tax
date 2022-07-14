@@ -36,6 +36,7 @@ $(function() {
     _sidebar = $('.sidebar'),
     _search = $('.search'),
     _nav = $('.navigation'),
+    _member = $('.left_block .member'),
     _sidebarClose = $('.sidebarClose'),
     _sidebarCtrl = $('.sidebarCtrl'),
     _overlay = $('.menu_overlay'),
@@ -94,6 +95,7 @@ $(function() {
   });
 
   // 先複製過去
+  _member.clone().prependTo(_mArea);
   _nav.clone().prependTo(_mArea);
   _menu.clone().prependTo(_mArea);
   _search.clone().prependTo(_body).removeClass('search').addClass('m_search');
