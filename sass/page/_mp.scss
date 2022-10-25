@@ -1395,6 +1395,15 @@ h2.blockTitle {
           background-size: 32px;
         }
       }
+      &.icon_service {
+        background: url(../images/mp/icon_service.png) no-repeat center center;
+        background-size: 32px;
+        &:hover,
+        &:focus {
+          background: $secondaryColor url(../images/mp/icon_service.png) no-repeat center center;
+          background-size: 32px;
+        }
+      }
     }
   }
   .subscribe {
