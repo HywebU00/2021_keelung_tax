@@ -1180,6 +1180,7 @@ h2.blockTitle {
   }
   @include screen('mobile') {
     margin-bottom: 0;
+    padding: 20px 3%;
   }
   .txt {
     color: #666;
@@ -1291,9 +1292,10 @@ h2.blockTitle {
   align-items: center;
   @include screen('tablet') {
     padding: 36px 10% 60px 10%;
+    flex-wrap: wrap;
   }
   @include screen('mobile') {
-    padding: 36px 8% 50px 8%;
+    padding: 36px 10% 36px 10%;
   }
   &:before {
     content: "";
@@ -1302,17 +1304,18 @@ h2.blockTitle {
     right: 36px;
     height: 200px;
     display: block;
-    border-radius: 12px;
+    border-radius: 10px;
     background: #fff;
     box-shadow: 0 0 15px rgba($color: $primaryColor, $alpha: .3);
     z-index: 10;
     @include screen('tablet') {
-      height: 180px;
       left: 3%;
       right: 3%;
     }
     @include screen('mobile') {
-      height: 120px;
+      padding: 36px 10%;
+      flex-wrap: wrap;
+      height: 80px;
     }
   }
   &:after {
@@ -1324,6 +1327,9 @@ h2.blockTitle {
     z-index: 9;
     left: 0;
     bottom: 0;
+    @include screen('mobile') {
+      display: none;
+    }
   }
   .social_link {
     width: 50%;
@@ -1337,13 +1343,11 @@ h2.blockTitle {
       padding-right: 5%;
     }
     @media screen and (max-width: 500px) {
-      padding-right: 4%;
-      width: 60%;
+      padding-right: 0;
     }
     @media screen and (max-width: 375px) {
-      padding-right: 3%;
-      width: 58%;
       border: 0;
+      width: 100%;
     }
     a {
       width: 64px;
@@ -1396,11 +1400,11 @@ h2.blockTitle {
         }
       }
       &.icon_service {
-        background: url(../images/mp/icon_service.png) no-repeat center center;
+        background: url(../images/mp/icon_service.svg) no-repeat center center;
         background-size: 32px;
         &:hover,
         &:focus {
-          background: $secondaryColor url(../images/mp/icon_service.png) no-repeat center center;
+          background: $secondaryColor url(../images/mp/icon_service.svg) no-repeat center center;
           background-size: 32px;
         }
       }
@@ -1413,14 +1417,12 @@ h2.blockTitle {
     z-index: 10;
     @include screen('mobile') {
       padding-left: 5%;
+      margin-top: 10px;
     }
     @media screen and (max-width: 500px) {
-      padding-left: 4%;
-      width: 40%;
-    }
-    @media screen and (max-width: 375px) {
-      padding-left: 4%;
-      width: 42%;
+      padding-left: 0;
+      text-align: center;
+      width: 100%;
     }
     a {
       color: $primaryColor;
@@ -1429,7 +1431,7 @@ h2.blockTitle {
       padding-left: 110px;
       line-height: 70px;
       height: 70px;
-      display: block;
+      display: inline-block;
       &:hover,
       &:focus {
         color: $secondaryColor;
@@ -1445,10 +1447,7 @@ h2.blockTitle {
         padding-left: 70px;
         background-size: 50px;
       }
-      @media screen and (max-width: 500px) {
-        background: none;
-        padding-left: 0;
-      }
+      @media screen and (max-width: 500px) {}
       @media screen and (max-width: 375px) {
         font-size: 1.25rem;
       }
