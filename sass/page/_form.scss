@@ -304,17 +304,30 @@ a.deletefile:before {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @include screen('mobile') {
+      flex-direction: column;
+    }
     p {
       width: 100%;
       margin-top: 0;
     }
     >div {
       width: 50%;
+      @include screen('mobile') {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
       &.naturalPerson {
         width: 47%;
         border-left: 1px solid #ccc;
         padding-left: 1.5rem;
         margin-left: 3%;
+        @include screen('mobile') {
+          width: 100%;
+          border-left: 0;
+          padding-left: 0;
+          margin-left: 0;
+        }
         .title {
           font-weight: bold;
           font-size: 1.6rem;
@@ -344,6 +357,11 @@ a.deletefile:before {
         }
         ul {
           @include li-reset;
+          @include screen('mobile') {
+            padding: 2rem 1rem 1rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, .4);
+          }
           li {
             margin-bottom: 1.2rem;
             line-height: 160%;
@@ -766,7 +784,7 @@ h3.arrowTitle {
       padding: 4px 12px 4px 4px;
       border-radius: 5px;
       border: 2px solid #ccc;
-      margin: 0 4px;
+      margin: 4px;
       cursor: pointer;
       input {
         visibility: hidden;
@@ -774,8 +792,7 @@ h3.arrowTitle {
       }
       &:hover,
       &:focus,
-      &.active,
-      {
+      &.active {
         border: 2px solid $primaryColor;
       }
     }
