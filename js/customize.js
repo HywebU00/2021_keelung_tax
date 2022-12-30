@@ -497,3 +497,11 @@ $(function() {
     });
   } else {}
 });
+
+const passwordInput = document.querySelector(".password");
+const eye = document.querySelector(".eyeclose");
+eye.addEventListener("click", function() {
+  this.classList.toggle("eye")
+  const type = passwordInput.getAttribute("type") === "password" ? "text" : "password"
+  passwordInput.setAttribute("type", type)
+})
