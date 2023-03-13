@@ -23,7 +23,7 @@ a.more {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   &:after {
-    content: "";
+    content: '';
     width: 20px;
     height: 20px;
     transform: rotate(0);
@@ -31,10 +31,10 @@ a.more {
     position: absolute;
     right: -20px;
     top: 14px;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: 0;
@@ -71,7 +71,7 @@ h2.blockTitle {
   text-align: center;
   margin-top: 0;
   span {
-    font-size: .875rem;
+    font-size: 0.875rem;
     display: block;
     color: #606060;
   }
@@ -106,7 +106,7 @@ h2.blockTitle {
     border-top: 1px solid #fff;
   }
   &:after {
-    content: "";
+    content: '';
     width: 50px;
     height: 60px;
     display: block;
@@ -126,7 +126,7 @@ h2.blockTitle {
   }
   .slick-prev,
   .slick-next {
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
     height: 24px !important;
     width: 30px !important;
     position: absolute;
@@ -137,7 +137,7 @@ h2.blockTitle {
     margin: 0;
     border-radius: 0;
     &:before {
-      content: "";
+      content: '';
       width: 10px;
       height: 10px;
       display: block;
@@ -146,7 +146,7 @@ h2.blockTitle {
       position: absolute;
       left: 9px;
       top: 10px;
-      margin-left: 0!important;
+      margin-left: 0 !important;
     }
     &:hover,
     &:focus {
@@ -160,7 +160,7 @@ h2.blockTitle {
     top: 5px;
     background: none;
     &:before {
-      content: "";
+      content: '';
       border-left: 2px solid #fff;
       border-bottom: 2px solid #fff;
     }
@@ -174,7 +174,7 @@ h2.blockTitle {
     top: 30px;
     background: none;
     &:before {
-      content: "";
+      content: '';
       border-top: 2px solid #fff;
       border-right: 2px solid #fff;
       top: 4px;
@@ -205,7 +205,7 @@ h2.blockTitle {
     li {
       padding: 0;
       border-bottom: 0;
-      border: 0!important;
+      border: 0 !important;
       margin-right: 30px;
       a {
         line-height: 60px;
@@ -275,7 +275,7 @@ h2.blockTitle {
           //   @include aspect-ratio(588, 601);
           // }
           &:after {
-            content: "";
+            content: '';
             width: 100%;
             height: 100%;
             position: absolute;
@@ -283,7 +283,7 @@ h2.blockTitle {
             left: 0;
             display: block;
             z-index: 99;
-            background: rgba($color: #000000, $alpha: .5);
+            background: rgba($color: #000000, $alpha: 0.5);
           }
           .caption {
             background: none;
@@ -320,7 +320,7 @@ h2.blockTitle {
               &.caption_info {
                 font-size: 1.125rem;
                 margin-bottom: 0.75rem;
-                text-shadow: rgba(0, 0, 0, .3) 0 0 2px;
+                text-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
                 @include screen('mobile') {
                   font-size: 1rem;
                 }
@@ -331,7 +331,7 @@ h2.blockTitle {
               &.caption_title {
                 font-size: 3rem;
                 margin-bottom: 0.75rem;
-                text-shadow: rgba(0, 0, 0, .3) 0 0 2px;
+                text-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
                 @media screen and (max-width: 1100px) {
                   font-size: 2.5rem;
                 }
@@ -346,9 +346,9 @@ h2.blockTitle {
                 font-size: 1.125rem;
                 margin-bottom: 0.75rem;
                 line-height: 160%;
-                letter-spacing: .05rem;
+                letter-spacing: 0.05rem;
                 margin-bottom: 1rem;
-                text-shadow: rgba(0, 0, 0, .3) 0 0 2px;
+                text-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
                 @media screen and (max-width: 1100px) {
                   font-size: 1rem;
                 }
@@ -369,11 +369,11 @@ h2.blockTitle {
                 a {
                   color: #fff;
                   background: $secondaryColor;
-                  padding: .9rem 2rem;
+                  padding: 0.9rem 2rem;
                   display: inline-block;
                   border-radius: 5px;
                   @media screen and (max-width: 1200px) {
-                    padding: .5rem 1.5rem;
+                    padding: 0.5rem 1.5rem;
                   }
                   &:hover,
                   &:focus {
@@ -407,28 +407,28 @@ h2.blockTitle {
           .caption {
             .caption_info {
               animation-name: worddynamic;
-              animation-duration: .8s;
+              animation-duration: 0.8s;
               animation-delay: 0s;
               animation-timing-function: ease-in;
               animation-fill-mode: forwards;
             }
             .caption_title {
               animation-name: worddynamic;
-              animation-duration: .5s;
-              animation-delay: .5s;
+              animation-duration: 0.5s;
+              animation-delay: 0.5s;
               animation-timing-function: ease-in;
               animation-fill-mode: forwards;
             }
             .caption_text {
               animation-name: worddynamic;
-              animation-duration: .5s;
+              animation-duration: 0.5s;
               animation-delay: 1s;
               animation-timing-function: ease-in;
               animation-fill-mode: forwards;
             }
             .caption_link {
               animation-name: worddynamic2;
-              animation-duration: .5s;
+              animation-duration: 0.5s;
               animation-delay: 1.2s;
               animation-timing-function: ease-in;
               animation-fill-mode: forwards;
@@ -473,7 +473,7 @@ h2.blockTitle {
     .slick-next {
       bottom: 80px;
       top: auto;
-      opacity: .4;
+      opacity: 0.4;
       @media screen and (max-width: 1200px) {
         bottom: 60px;
       }
@@ -483,7 +483,7 @@ h2.blockTitle {
       @media screen and (max-width: 768px) {
         bottom: auto;
         top: 256px;
-        opacity: .8;
+        opacity: 0.8;
       }
       @media screen and (max-width: 440px) {
         top: 286px;
@@ -518,7 +518,7 @@ h2.blockTitle {
       bottom: 84px;
       color: #fff;
       font-size: 1.125rem;
-      font-family: "Century Gothic", Arial, sans-serif;
+      font-family: 'Century Gothic', Arial, sans-serif;
       @media screen and (max-width: 1200px) {
         bottom: 64px;
         left: 8%;
@@ -587,7 +587,7 @@ h2.blockTitle {
             z-index: 9;
           }
           &:after {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
             right: 0;
@@ -595,7 +595,7 @@ h2.blockTitle {
             bottom: 0;
             background: #000;
             z-index: 10;
-            opacity: .3;
+            opacity: 0.3;
             transition: all 1s;
           }
           &:hover {
@@ -627,7 +627,8 @@ h2.blockTitle {
   padding-bottom: 0;
   .img-container {
     @include aspect-ratio(1200, 380);
-    a {}
+    a {
+    }
     .caption {
       font-size: 1rem;
       height: 3rem;
@@ -676,7 +677,7 @@ h2.blockTitle {
       width: 100%;
       padding-bottom: 30px;
     }
-    .tabs>.tabItem {
+    .tabs > .tabItem {
       line-height: 50px;
       padding: 0 24px;
       border-radius: 5px;
@@ -696,7 +697,7 @@ h2.blockTitle {
         color: #fff;
         background: $secondaryColor;
         &:before {
-          content: "";
+          content: '';
           width: 2px;
           height: 10px;
           background: #fff;
@@ -705,7 +706,7 @@ h2.blockTitle {
           left: 50%;
           top: 0;
           margin-left: -1px;
-          transition: all .5s;
+          transition: all 0.5s;
           transform: scale(1);
           transform-origin: center top;
           @include screen('mobile') {
@@ -713,7 +714,7 @@ h2.blockTitle {
           }
         }
         &:after {
-          content: "";
+          content: '';
           width: 2px;
           height: 20px;
           background: $secondaryColor;
@@ -722,7 +723,7 @@ h2.blockTitle {
           left: 50%;
           top: -20px;
           margin-left: -1px;
-          transition: all .5s;
+          transition: all 0.5s;
           transform: scale(1, 1);
           transform-origin: center bottom;
           @include screen('mobile') {
@@ -789,7 +790,7 @@ h2.blockTitle {
           vertical-align: middle;
           margin-right: 8px;
           border-radius: 50%;
-          transition: all .5s;
+          transition: all 0.5s;
           &:hover,
           &:focus {
             background: $secondaryColor url(../images/mp/icon_rss.svg) no-repeat center center;
@@ -863,7 +864,7 @@ h2.blockTitle {
         color: #1a1a1a;
         background: #fff;
         border-radius: 12px;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -898,7 +899,8 @@ h2.blockTitle {
           display: flex;
           align-items: center;
           overflow: hidden;
-          @include screen('mobile') {}
+          @include screen('mobile') {
+          }
         }
         &:hover,
         &:focus {
@@ -992,7 +994,7 @@ h2.blockTitle {
           white-space: normal;
           height: 4rem;
           line-height: 140%;
-          padding: .5rem 1rem;
+          padding: 0.5rem 1rem;
           font-size: 1rem;
           background: rgba(0, 0, 0, 0.6);
           @include screen('mobile') {
@@ -1000,7 +1002,7 @@ h2.blockTitle {
           }
         }
         img {
-          transition: all .5s;
+          transition: all 0.5s;
         }
         &:hover,
         &:focus {
@@ -1039,7 +1041,7 @@ h2.blockTitle {
     bottom: 50px;
     color: #666;
     font-size: 1.125rem;
-    font-family: "Century Gothic", Arial, sans-serif;
+    font-family: 'Century Gothic', Arial, sans-serif;
     @include screen('mobile') {
       margin-left: -65px;
       left: 50%;
@@ -1087,7 +1089,7 @@ h2.blockTitle {
             background: rgba(0, 0, 0, 0.6);
             font-size: 1rem;
             bottom: -48px;
-            transition: all .5s;
+            transition: all 0.5s;
           }
           &:hover,
           &:focus {
@@ -1138,7 +1140,7 @@ h2.blockTitle {
     }
     &:focus {
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: 9;
         width: 100%;
@@ -1209,7 +1211,7 @@ h2.blockTitle {
       padding: 80px 0 10px 0;
     }
     &:before {
-      content: "";
+      content: '';
       width: 100%;
       height: 315px;
       background: url(../images/mp/contact_bg.jpg) no-repeat center top;
@@ -1223,7 +1225,7 @@ h2.blockTitle {
         display: none;
       }
     }
-    >div {
+    > div {
       background: $primaryColor;
       margin: 0 25px;
       padding: 24px 2rem 2rem 10%;
@@ -1258,9 +1260,9 @@ h2.blockTitle {
       padding: 0 1rem;
       margin-right: 0.5rem;
       border-radius: 3px;
-      transition: all .5s;
+      transition: all 0.5s;
       @media screen and (max-width: 960px) {
-        padding: 0 .5rem;
+        padding: 0 0.5rem;
         line-height: 2.5rem;
       }
       &:hover,
@@ -1298,7 +1300,7 @@ h2.blockTitle {
     padding: 36px 10% 36px 10%;
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 36px;
     right: 36px;
@@ -1306,7 +1308,7 @@ h2.blockTitle {
     display: block;
     border-radius: 10px;
     background: #fff;
-    box-shadow: 0 0 15px rgba($color: $primaryColor, $alpha: .3);
+    box-shadow: 0 0 15px rgba($color: $primaryColor, $alpha: 0.3);
     z-index: 10;
     @include screen('tablet') {
       left: 3%;
@@ -1319,7 +1321,7 @@ h2.blockTitle {
     }
   }
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 48px;
@@ -1358,14 +1360,15 @@ h2.blockTitle {
       font-size: 0;
       color: $primaryColor;
       flex: 0 0 64px;
-      @include screen('mobile') {}
+      @include screen('mobile') {
+      }
       @media screen and (max-width: 665px) {
         width: 48px;
         height: 48px;
         flex: 0 0 48px;
       }
       @media screen and (max-width: 375px) {
-        margin-right: .4rem;
+        margin-right: 0.4rem;
         border: 2px solid $primaryColor;
       }
       &:hover {
@@ -1447,10 +1450,39 @@ h2.blockTitle {
         padding-left: 70px;
         background-size: 50px;
       }
-      @media screen and (max-width: 500px) {}
+      @media screen and (max-width: 500px) {
+      }
       @media screen and (max-width: 375px) {
         font-size: 1.25rem;
       }
+    }
+  }
+}
+
+.rb_button {
+  width: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 60px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 4px;
+    transition: all 0.5s;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    &:hover {
+      box-shadow: 1px 0 4px rgba(0, 0, 0, 0.6);
+    }
+    &:focus {
+      outline: 2px solid $secondaryColor;
     }
   }
 }
