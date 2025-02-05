@@ -1399,7 +1399,7 @@ input.calendar + label {
       background: #fff;
       padding: 1.5rem;
       border-radius: 6px;
-      scrollbar-color: #444 rgba(0, 0, 0, 0.2);
+      // scrollbar-color: #444 rgba(0, 0, 0, 0.2);
       p {
         margin-top: 0;
       }
@@ -1413,17 +1413,17 @@ input.calendar + label {
   }
 }
 .contentText::-webkit-scrollbar-track {
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset;
+  // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  background-color: #f5f5f5;
+  background-color: #ccc;
+  overflow: hidden;
 }
 .contentText::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background-color: #f5f5f5;
+  width: 10px;
+  height: 10px;
 }
 .contentText::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  background: #444;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #666;
 }
