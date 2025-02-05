@@ -11706,6 +11706,20 @@ input.calendar + label {
   padding: 1.5rem;
   border-radius: 6px;
 }
+.overlay .popup .contentText::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.overlay .popup .contentText::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.overlay .popup .contentText::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #666;
+}
 .overlay .popup .contentText p {
   margin-top: 0;
 }
@@ -11714,23 +11728,6 @@ input.calendar + label {
 }
 .overlay .popup .popupFoot {
   padding: 0;
-}
-
-.contentText::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: #ccc;
-  overflow: hidden;
-}
-
-.contentText::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.contentText::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #666;
 }
 
 a.more {

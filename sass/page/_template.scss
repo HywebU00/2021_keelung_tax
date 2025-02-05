@@ -1399,7 +1399,21 @@ input.calendar + label {
       background: #fff;
       padding: 1.5rem;
       border-radius: 6px;
-      // scrollbar-color: #444 rgba(0, 0, 0, 0.2);
+      &::-webkit-scrollbar-track {
+        // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #ccc;
+        overflow: hidden;
+      }
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #666;
+      }
       p {
         margin-top: 0;
       }
@@ -1411,19 +1425,4 @@ input.calendar + label {
       padding: 0;
     }
   }
-}
-.contentText::-webkit-scrollbar-track {
-  // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ccc;
-  overflow: hidden;
-}
-.contentText::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-.contentText::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #666;
 }
