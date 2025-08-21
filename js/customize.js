@@ -16,8 +16,7 @@ $(function () {
   // 取得元素
   var $marqueeWrap = $('.marqueeBlock');
   var $marquee = $marqueeWrap.find('ul');
-  var $marqueeBtn = $('.marqueeToggle');     // 你的跑馬燈暫停/播放按鈕
-  var $marqueeStatus = $('#marqueeStatus');  // 讀屏通報
+  var $marqueeBtn = $('.marqueeToggle'); // 跑馬燈暫停/播放按鈕
 
   // ARIA：讓跑馬燈對輔助工具友善
   if (!$marquee.attr('id')) $marquee.attr('id', 'marqueeList');
@@ -52,8 +51,8 @@ $(function () {
       .text(paused ? '播放' : '暫停')
       .attr('aria-label', paused ? '播放跑馬燈' : '暫停跑馬燈');
 
+    // 仍保留在列表本身切換 aria-live 的做法
     $marquee.attr('aria-live', paused ? 'polite' : 'off');
-    if ($marqueeStatus.length) $marqueeStatus.text(paused ? '跑馬燈已暫停' : '跑馬燈已播放');
   }
 
   // 初始為播放中
@@ -75,19 +74,12 @@ $(function () {
     }
   });
 
-  // 由於我們開了 pauseOnHover:true，Slick 會在 mouseleave 自動恢復；
-  // 這裡在移開時「若為手動暫停」就再次強制暫停，確保不會被自動恢復蓋掉。
+  // 移開時若為手動暫停，強制維持暫停
   $marquee.on('mouseleave', function () {
     if (isManuallyPaused) {
       $marquee.slick('slickPause');
     }
   });
-
-  // $marqueeBtn.on('mouseenter', function () {
-  //   $(this).addClass('is-hovering');
-  // }).on('mouseleave', function () {
-  //   $(this).removeClass('is-hovering');
-  // });
 });
 
 
@@ -97,7 +89,6 @@ $(function () {
   const $leftUl        = $(".leftSlider ul");                 // 左側 slick 容器
   const $leftControls  = $(".leftSlider_controls");           // 左側計數器（有需要就會更新）
   const $pauseBtn      = $(".leftSlider_sliderToggle");       // 左側暫停/播放按鈕
-  const $status        = $("#leftSliderStatus");              // 讀屏通報（sr-only）
   const $rightWrap     = $(".rightSlider");                   // 右側包著多組 <ul> 的容器
 
   // === 右側：把每個 <ul> 包成可切換的 block，預設隱藏 ===
@@ -109,7 +100,6 @@ $(function () {
 
   $leftUl
     .on("init", function (e, slick) {
-      // 初始化左側計數器
       const total = slick.slideCount;
       const pad = n => (n < 10 ? "0" + n : "" + n);
       $leftControls.html(`<span>${pad(1)}</span> / ${pad(total)}`);
@@ -132,42 +122,39 @@ $(function () {
       arrows: true,
       prevArrow: '<button type="button" class="slick-prev" aria-label="上一張">Previous</button>',
       nextArrow: '<button type="button" class="slick-next" aria-label="下一張">Next</button>',
-      pauseOnHover: false,  // 由自訂 hover 控制，避免覆蓋手動暫停
+      pauseOnHover: false,
       pauseOnFocus: false
     });
 
   // === 右側：只在可見時初始化；已初始化則 setPosition 重算 ===
   function initRightSlider($ul){
-  if ($ul.hasClass('slick-initialized')) return;
+    if ($ul.hasClass('slick-initialized')) return;
 
-  // 先綁 init 事件，等待 slick 初始化完成後把 dots 的 button 改成 span
-  $ul.on('init', function(){
-    $(this).find('.slick-dots button').each(function () {
-      $(this).replaceWith(
-        $('<span>' + $(this).html() + '</span>').removeAttr('tabindex')
-      );
+    $ul.on('init', function(){
+      $(this).find('.slick-dots button').each(function () {
+        $(this).replaceWith(
+          $('<span>' + $(this).html() + '</span>').removeAttr('tabindex')
+        );
+      });
     });
-  });
 
-  // 再初始化 slick（init 事件會在這裡觸發）
-  $ul.slick({
-    dots: true,
-    autoplay: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 500,
-    arrows: true,
-    prevArrow: '<button type="button" class="slick-prev" aria-label="上一頁">Prev</button>',
-    nextArrow: '<button type="button" class="slick-next" aria-label="下一頁">Next</button>',
-    responsive: [
-      { breakpoint: 320,  settings: { slidesToShow: 2, slidesToScroll: 1 } },
-      { breakpoint: 920,  settings: { slidesToShow: 2, slidesToScroll: 1 } },
-      { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1 } }
-    ]
-  });
-}
-
+    $ul.slick({
+      dots: true,
+      autoplay: false,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 500,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev" aria-label="上一頁">Prev</button>',
+      nextArrow: '<button type="button" class="slick-next" aria-label="下一頁">Next</button>',
+      responsive: [
+        { breakpoint: 320,  settings: { slidesToShow: 2, slidesToScroll: 1 } },
+        { breakpoint: 920,  settings: { slidesToShow: 2, slidesToScroll: 1 } },
+        { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1 } }
+      ]
+    });
+  }
 
   function showRightBlock(index) {
     const total = $rightBlocks.length;
@@ -176,13 +163,13 @@ $(function () {
     const idx = index % total;
     $rightBlocks.hide();
 
-    const $block = $rightBlocks.eq(idx).show();     // 先顯示，確保有寬度
+    const $block = $rightBlocks.eq(idx).show();
     const $ul    = $block.children("ul");
 
     if ($ul.hasClass("slick-initialized")) {
-      $ul.slick("setPosition");                     // 重新量測，避免 0 寬
+      $ul.slick("setPosition");
     } else {
-      initRightSlider($ul);                         // 可見後再初始化
+      initRightSlider($ul);
     }
   }
 
@@ -194,12 +181,11 @@ $(function () {
     showRightBlock(nextSlide);
   });
 
-  // === 左側：暫停/播放按鈕 + hover 行為（hover 暫停、移開恢復；手動暫停優先） ===
-  let isManuallyPaused = false;   // 使用者是否按了暫停
-  let isHovering       = false;   // 滑鼠是否在左側輪播上
-  let pendingPlay      = false;   // 按了播放但仍在 hover，等移開再播
+  // === 左側：暫停/播放按鈕 + hover 行為 ===
+  let isManuallyPaused = false;
+  let isHovering       = false;
+  let pendingPlay      = false;
 
-  // ARIA + 按鈕樣式（is-paused / is-playing）
   function setLeftPausedUI(paused) {
     $pauseBtn
       .toggleClass("is-paused", paused)
@@ -208,25 +194,21 @@ $(function () {
       .text(paused ? "播放" : "暫停")
       .attr("aria-label", paused ? "播放輪播" : "暫停輪播");
     $leftUl.attr("aria-live", paused ? "polite" : "off");
-    if ($status.length) $status.text(paused ? "輪播已暫停" : "輪播已播放");
   }
-  setLeftPausedUI(false); // 初始播放中
+  setLeftPausedUI(false);
 
-  // 按鈕：手動暫停/播放
   $pauseBtn.on("click", function () {
     const nowPaused = $pauseBtn.hasClass("is-paused");
     if (nowPaused) {
-      // 使用者按「播放」
       isManuallyPaused = false;
       if (isHovering) {
-        pendingPlay = true;      // 還在 hover，等移開再播
+        pendingPlay = true;
       } else {
         pendingPlay = false;
         $leftUl.slick("slickPlay");
       }
       setLeftPausedUI(false);
     } else {
-      // 使用者按「暫停」
       isManuallyPaused = true;
       pendingPlay = false;
       $leftUl.slick("slickPause");
@@ -234,7 +216,6 @@ $(function () {
     }
   });
 
-  // Hover：移入暫停；移出若未手動暫停則恢復（或處理 pendingPlay）
   $leftUl.on("mouseenter", function () {
     isHovering = true;
     $leftUl.slick("slickPause");
@@ -242,7 +223,7 @@ $(function () {
 
   $leftUl.on("mouseleave", function () {
     isHovering = false;
-    if (isManuallyPaused) return;       // 手動暫停優先
+    if (isManuallyPaused) return;
     if (pendingPlay) {
       pendingPlay = false;
       $leftUl.slick("slickPlay");
@@ -253,6 +234,7 @@ $(function () {
     setLeftPausedUI(false);
   });
 });
+
 
 // mpSlider首頁輪播
 $(function () {
@@ -270,8 +252,7 @@ $(function () {
   }
 
   var $slider = $('.mpSlider');
-  var $btn    = $('.mpSlider_sliderToggle'); // ← 改用這個 class
-  var $status = $('#mpSliderStatus');        // 給讀屏通報狀態（可選）
+  var $btn    = $('.mpSlider_sliderToggle'); // 暫停/播放按鈕
   var $wrap   = $('.heroSlider');            // 外層容器（可選，用於 .is-hovering 樣式）
 
   // 若容器沒有 id，補一個，並加上 ARIA
@@ -314,7 +295,7 @@ $(function () {
   var isHovering = false;       // 滑鼠是否位於輪播
 
   function setPausedUI(paused) {
-    // 切換按鈕樣式 class：.is-paused / .is-playing 供你寫 CSS
+    // 切換按鈕樣式：.is-paused / .is-playing 供你寫 CSS
     $btn
       .toggleClass('is-paused', paused)
       .toggleClass('is-playing', !paused)
@@ -322,9 +303,8 @@ $(function () {
       .text(paused ? '播放' : '暫停')
       .attr('aria-label', paused ? '播放輪播' : '暫停輪播');
 
-    // ARIA live：暫停時才禮貌性通報
+    // 暫停時才開啟禮貌性通報
     $slider.attr('aria-live', paused ? 'polite' : 'off');
-    if ($status.length) $status.text(paused ? '輪播已暫停' : '輪播已播放');
   }
 
   // 初始：自動播放中 → 按鈕顯示「暫停」
@@ -365,7 +345,7 @@ $(function () {
     }
   });
 
-  // （可選）若也要鍵盤聚焦輪播時暫停、離開恢復，取消下列註解
+  // （可選）鍵盤聚焦輪播時暫停、離開恢復
   $slider.on('focusin', function () {
     $slider.slick('slickPause');
   });
@@ -373,6 +353,7 @@ $(function () {
     if (!isManuallyPaused && !isHovering) $slider.slick('slickPlay');
   });
 });
+
 
 //collectVideo
 $(function () {
@@ -438,52 +419,12 @@ $(function(){
 });
 
 //dummiesBlock
-// $(function(){
-//   $('.dummiesBlock ul').on('init reInit afterChange', function(event, slick, currentSlide) {
-//     var i = (currentSlide ? currentSlide : 0) + 1;
-//     if (slick.slideCount < 10) {
-//       if (i < 10) {
-//         $('.dummiesBlock_controls').html('<span>0' + i + '</span> / 0' + slick.slideCount);
-//       } else {
-//         $('.dummiesBlock_controls').html('<span>' + i + '</span> / 0' + slick.slideCount);
-//       }
-//     } else {
-//       if (i < 10) {
-//         $('.dummiesBlock_controls').html('<span>0' + i + '</span> / ' + slick.slideCount);
-//       } else {
-//         $('.dummiesBlock_controls').html('<span>' + i + '</span> / ' + slick.slideCount);
-//       }
-//     }
-//   });
-//   var $carousel = $(".dummiesBlock ul").slick({
-//     mobileFirst: true,
-//     dots: false,
-//     arrow: true,
-//     infinite: true,
-
-//     autoplaySpeed: 5000,
-//     autoplay: true,
-//     lazyLoaded: true,
-//     lazyLoad: "ondemand",
-//     ease: "ease",
-//     pauseOnHover: false,
-//     responsive: [{
-//       breakpoint: 920,
-//       settings: {
-//         centerMode: true,
-//         centerPadding: '165px',
-//         slidesToShow: 3
-//       },
-//     }, ],
-//   });
-// });
 $(function(){
-  // === 專屬 dummiesBlock 的變數 ===
   const $dummiesBlock         = $('.dummiesBlock');
   const $dummiesBlockUl       = $dummiesBlock.find('ul');
   const $dummiesBlockControls = $dummiesBlock.find('.dummiesBlock_controls');
   const $dummiesBlockToggle   = $dummiesBlock.find('.dummiesBlock_sliderToggle'); // 無障礙暫停鈕
-  const $dummiesBlockStatus   = $('#dummiesSliderStatus');                         // 讀屏通報（sr-only）
+  // const $dummiesBlockStatus   = $('#dummiesSliderStatus'); // ← 已移除
 
   // 可存取屬性
   if (!$dummiesBlockUl.attr('id')) $dummiesBlockUl.attr('id', 'dummiesSlider');
@@ -505,16 +446,16 @@ $(function(){
     );
   });
 
-  // Slick 初始化（修正拼字、開啟 hover/focus 暫停）
+  // Slick 初始化
   $dummiesBlockUl.slick({
     mobileFirst: true,
     dots: false,
-    arrows: true,                 // ← 原本的 arrow 改為 arrows
+    arrows: true,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
     lazyLoad: 'ondemand',
-    cssEase: 'ease',              // ← 原本的 ease 改為 cssEase
+    cssEase: 'ease',
     pauseOnHover: true,
     pauseOnFocus: true,
     speed: 500,
@@ -541,7 +482,7 @@ $(function(){
       .attr('aria-label', paused ? '播放輪播' : '暫停輪播');
 
     $dummiesBlockUl.attr('aria-live', paused ? 'polite' : 'off');
-    if ($dummiesBlockStatus.length) $dummiesBlockStatus.text(paused ? '輪播已暫停' : '輪播已播放');
+    // if ($dummiesBlockStatus.length) $dummiesBlockStatus.text(paused ? '輪播已暫停' : '輪播已播放'); // ← 已移除
   }
   dummiesSetToggleUI(false); // 初始播放中
 
@@ -563,7 +504,6 @@ $(function(){
     if (dummiesManuallyPaused) $dummiesBlockUl.slick('slickPause');
   });
 });
-
 
 
 // adSlider廣告輪播
