@@ -190,7 +190,6 @@ $(function () {
     $pauseBtn
       .toggleClass("is-paused", paused)
       .toggleClass("is-playing", !paused)
-      .attr("aria-pressed", paused)
       .text(paused ? "播放" : "暫停")
       .attr("aria-label", paused ? "播放輪播" : "暫停輪播");
     $leftUl.attr("aria-live", paused ? "polite" : "off");
@@ -299,7 +298,6 @@ $(function () {
     $btn
       .toggleClass('is-paused', paused)
       .toggleClass('is-playing', !paused)
-      .attr('aria-pressed', paused)
       .text(paused ? '播放' : '暫停')
       .attr('aria-label', paused ? '播放輪播' : '暫停輪播');
 
