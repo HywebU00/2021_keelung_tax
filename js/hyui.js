@@ -179,7 +179,7 @@ $(function() {
       liHasChild.off('click');
 
       // 傳統menu
-      if (_menu2.lenght > 0) {
+      if (_menu2.length > 0) {
         liHasChild.on({
           mouseenter: function() {
             $(this).children('ul').stop(true, false).fadeIn();
@@ -199,17 +199,28 @@ $(function() {
       // });
     }
   }
+  // 新增：依視窗寬度同步 .search 顯示/隱藏
+  function syncSearchVisibility() {
+    ww = _window.outerWidth();
+    if (ww < wwSmall) {
+      $('.search').hide();      // 行動版（<920）隱藏
+    } else {
+      $('.search').show();      // 桌機版（≥920）顯示
+    }
+  }
+
   //行動版/電腦版切換
   var resizeTimer;
   _window.on('resize', function(event) {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
-      $(".search").hide()
+      // $(".search").hide()
       $('.m_search').hide();
       mobileMenu();
     }, 50);
   });
   mobileMenu();
+  syncSearchVisibility();
 
   var menu_mode = false;
   var _menuSwitch = $('.menuSwitch');

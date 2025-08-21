@@ -54,7 +54,7 @@
 .slick-track:before,
 .slick-track:after {
   display: table;
-  content: '';
+  content: "";
 }
 
 .slick-track:after {
@@ -72,7 +72,7 @@
   min-height: 1px;
 }
 
-[dir='rtl'] .slick-slide {
+[dir="rtl"] .slick-slide {
   float: right;
 }
 
@@ -144,7 +144,7 @@
   border: none;
   outline: none;
   box-shadow: none;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   margin-top: -22px;
   &:hover,
   &:focus {
@@ -154,45 +154,45 @@
   }
 }
 
-
 /* 上一則 位置 圖片*/
 
 .slick-prev {
   left: 25px;
-  background: url('../images/slick/icon_arrow_left.png') center center no-repeat RGBA(255, 255, 255, .8);
+  background: url("../images/slick/icon_arrow_left.png") center center no-repeat
+    RGBA(255, 255, 255, 0.8);
   background-size: 24px 24px;
   /* 箭頭 hover及focus 樣式 */
   &:hover,
   &:focus {
     // background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, .8);
-    background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat $aFocus;
+    background: url("../images/slick/icon_arrow_left_inverse.png") center center
+      no-repeat $aFocus;
     background-size: 24px 24px;
   }
 }
-
 
 /* 下一則 位置 圖片*/
 
 .slick-next {
   right: 25px;
-  background: url('../images/slick/icon_arrow_right.png') center center no-repeat RGBA(255, 255, 255, .8);
+  background: url("../images/slick/icon_arrow_right.png") center center
+    no-repeat RGBA(255, 255, 255, 0.8);
   background-size: 24px 24px;
   /* 箭頭 hover及focus 樣式 */
   &:hover,
   &:focus {
     // background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, .8);
-    background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat $aFocus;
+    background: url("../images/slick/icon_arrow_right_inverse.png") center
+      center no-repeat $aFocus;
     background-size: 24px 24px;
   }
 }
 
-
 /* 沒有無限輪播時，滑到最兩邊資料時，箭頭暗掉 */
 
 .slick-disabled {
-  opacity: .25;
+  opacity: 0.25;
 }
-
 
 /* ---點的樣式---*/
 
@@ -224,7 +224,6 @@
   }
 }
 
-
 /* ---點的位置、大小、顏色---*/
 
 .slick-dots {
@@ -238,7 +237,7 @@
     button {
       /* 點的顏色 */
       background: #c4c4c4;
-      opacity: .4;
+      opacity: 0.4;
       width: 12px;
       height: 12px;
       border-radius: 25px;
@@ -285,25 +284,23 @@
   padding-bottom: 3em;
   @include gutter(0);
   .img-container {
-    @include aspect-ratio(5,
-    2); //PC版比例
-    @include screen('mobile') {
-      @include aspect-ratio(5,
-      3); //Mobile版比例
+    @include aspect-ratio(5, 2); //PC版比例
+    @include screen("mobile") {
+      @include aspect-ratio(5, 3); //Mobile版比例
     }
   }
-  .slick-prev {
-    @include screen('mobile') {
-      top: 35%;
-      left: 2%;
-    }
-  }
-  .slick-next {
-    @include screen('mobile') {
-      top: 35%;
-      right: 2%;
-    }
-  }
+  // .slick-prev {
+  //   @include screen('mobile') {
+  //     top: 35%;
+  //     left: 2%;
+  //   }
+  // }
+  // .slick-next {
+  //   @include screen('mobile') {
+  //     top: 35%;
+  //     right: 2%;
+  //   }
+  // }
 }
 
 // slick._scss
@@ -318,31 +315,30 @@
   }
   .img-container {
     margin: 0px 15px;
-    @include aspect-ratio(4,
-    3);
+    @include aspect-ratio(4, 3);
     overflow: hidden;
     img {
       object-fit: contain;
     }
   }
   .caption {
-    padding: .5em !important;
+    padding: 0.5em !important;
     position: absolute;
-    background: rgba(0, 0, 0, .75) !important;
-    color: #FFF;
+    background: rgba(0, 0, 0, 0.75) !important;
+    color: #fff;
     bottom: -2em !important;
     left: 0;
-    font-size: .938em !important;
+    font-size: 0.938em !important;
     height: 2em !important;
     line-height: 1 !important;
     width: 100%;
     @include text-overflow;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
   }
   // dots
   .slick-dots {
     bottom: -30px !important;
-    @include screen('mobile') {
+    @include screen("mobile") {
       bottom: -40px !important;
       padding: 0;
     }
@@ -387,26 +383,25 @@
   }
   .img-container {
     margin: 0px 15px;
-    @include aspect-ratio(4,
-    3);
+    @include aspect-ratio(4, 3);
     overflow: hidden;
     img {
       object-fit: contain;
     }
   }
   .caption {
-    padding: .5em !important;
+    padding: 0.5em !important;
     position: absolute;
-    background: rgba(0, 0, 0, .75) !important;
-    color: #FFF;
+    background: rgba(0, 0, 0, 0.75) !important;
+    color: #fff;
     bottom: -2em !important;
     left: 0;
-    font-size: .938em !important;
+    font-size: 0.938em !important;
     height: 2em !important;
     line-height: 1 !important;
     width: 100%;
     @include text-overflow;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
   }
   // dots
   // .slick-dots {
@@ -445,7 +440,6 @@
   }
 }
 
-
 /*  slick-lightbox  */
 
 .slick-lightbox {
@@ -460,7 +454,7 @@
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
   .slick-loading .slick-list {
-    background-color: transparent
+    background-color: transparent;
   }
   .slick-prev {
     left: 5px;
@@ -470,7 +464,8 @@
   }
   .slick-next {
     right: 5px;
-    background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
+    background: url(../vendor/slick/icon_arrow_right.png) center center
+      no-repeat;
     background-size: 80%;
     z-index: 9;
   }
@@ -480,7 +475,7 @@
   opacity: 0;
   &.slick-lightbox-ie {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0)
+    filter: alpha(opacity=0);
   }
 }
 
@@ -490,7 +485,7 @@
   opacity: 0;
   &.slick-lightbox-ie {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0)
+    filter: alpha(opacity=0);
   }
 }
 
@@ -499,14 +494,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .slick-lightbox-slick-item {
   text-align: center;
   overflow: hidden;
   &:before {
-    content: '';
+    content: "";
     display: inline-block;
     height: 100%;
     vertical-align: middle;
@@ -514,7 +509,10 @@
   }
 }
 
-.slick-caption-bottom .slick-lightbox-slick-item .slick-lightbox-slick-item .slick-lightbox-slick-caption {
+.slick-caption-bottom
+  .slick-lightbox-slick-item
+  .slick-lightbox-slick-item
+  .slick-lightbox-slick-caption {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -523,7 +521,10 @@
   margin-bottom: 20px;
 }
 
-.slick-caption-dynamic .slick-lightbox-slick-item .slick-lightbox-slick-item .slick-lightbox-slick-caption {
+.slick-caption-dynamic
+  .slick-lightbox-slick-item
+  .slick-lightbox-slick-item
+  .slick-lightbox-slick-caption {
   display: block;
   text-align: center;
 }
@@ -573,9 +574,9 @@
     transform: rotate(45deg);
     position: absolute;
     top: 18px;
-    background: #DDD;
+    background: #ddd;
     left: 6px;
-    transition: .3s all ease-out;
+    transition: 0.3s all ease-out;
   }
   &:after {
     content: "";
@@ -584,9 +585,9 @@
     transform: rotate(-45deg);
     position: absolute;
     top: 18px;
-    background: #DDD;
+    background: #ddd;
     left: 6px;
-    transition: .3s all ease-out;
+    transition: 0.3s all ease-out;
   }
   &:hover,
   &:focus {
@@ -595,7 +596,7 @@
     border: none;
     &:before,
     &:after {
-      background: #FFF;
+      background: #fff;
     }
   }
 }
@@ -617,16 +618,15 @@
     text-align: center;
     font-weight: bold;
     max-width: 100px;
-    color: #FFF;
-    padding: .2em .5em;
+    color: #fff;
+    padding: 0.2em 0.5em;
     margin: 0px auto;
     background: $primaryColor;
     border-radius: 20px;
-    text-shadow: 1px 1px 2px RGBA(0, 0, 0, .8);
+    text-shadow: 1px 1px 2px RGBA(0, 0, 0, 0.8);
   }
   .img-container {
-    @include aspect-ratio(16,
-    9);
+    @include aspect-ratio(16, 9);
     img {
       position: absolute;
       width: 100%;
@@ -640,10 +640,10 @@
   }
   p {
     position: absolute;
-    background: RGBA(0, 0, 0, .55);
+    background: RGBA(0, 0, 0, 0.55);
     text-align: center;
-    color: #FFF;
-    padding: .5em;
+    color: #fff;
+    padding: 0.5em;
     box-sizing: border-box;
     @include text-overflow;
     bottom: 0px;
@@ -652,22 +652,23 @@
     line-height: 1.5em;
     margin: 0px;
     z-index: 2;
-    @include screen('mobile') {
+    @include screen("mobile") {
       display: none;
     }
   }
   .slick-next {
-    background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
+    background: url(../vendor/slick/icon_arrow_right.png) center center
+      no-repeat;
     background-size: 80%;
-    @include screen('mobile') {
-      right: .5em;
+    @include screen("mobile") {
+      right: 0.5em;
     }
   }
   .slick-prev {
     background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
     background-size: 80%;
-    @include screen('mobile') {
-      left: .5em;
+    @include screen("mobile") {
+      left: 0.5em;
     }
   }
   .Slider-for {

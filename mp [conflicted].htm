@@ -94,7 +94,7 @@
             <a href="#">網站導覽</a>
           </noscript>
           <!-- menu Start -->
-          <a class="menuSwitch" href="" role="button">選單</a>
+
           <nav class="menu menu2" role="navigation" aria-label="About page">
             <ul>
               <li>
@@ -112,7 +112,7 @@
               <li><a href="#">會員登入</a></li>
             </ul>
           </nav>
-
+          <a class="menuSwitch" href="" role="button">選單</a>
           <nav class="menu menu1">
             <ul>
               <li>
@@ -299,6 +299,7 @@
             type="button"
             class="leftSlider_sliderToggle"
             aria-controls="leftSlider"
+            aria-pressed="false"
             aria-label="暫停輪播"
           >
             暫停
@@ -315,21 +316,17 @@
                   />
                   <source
                     media="(min-width: 992px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <source
                     media="(min-width: 576px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <source
                     media="(max-width: 575px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <img
-                    data-src="images/mp/banner1.jpg"
                     src="images/mp/banner1.jpg"
                     class="cover lazy"
                     alt="圖說1"
@@ -354,26 +351,21 @@
                 <picture>
                   <source
                     media="(min-width: 1200px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <source
                     media="(min-width: 992px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <source
                     media="(min-width: 576px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <source
                     media="(max-width: 575px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <img
-                    data-src="images/mp/banner1.jpg"
                     src="images/mp/banner1.jpg"
                     class="cover lazy"
                     alt="圖說1"
@@ -398,26 +390,21 @@
                 <picture>
                   <source
                     media="(min-width: 1200px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <source
                     media="(min-width: 992px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <source
                     media="(min-width: 576px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <source
                     media="(max-width: 575px)"
-                    data-srcset="images/mp/banner1.jpg"
                     srcset="images/mp/banner1.jpg"
                   />
                   <img
-                    data-src="images/mp/banner1.jpg"
                     src="images/mp/banner1.jpg"
                     class="cover lazy"
                     alt="圖說1"
@@ -438,7 +425,12 @@
               </div>
             </li>
           </ul>
-          <div class="leftSlider_controls"><span>07</span> / 07</div>
+          <div class="leftSlider_controls">
+            <span class="counter"
+              ><span class="current">01</span> /
+              <span class="total">03</span></span
+            >
+          </div>
         </div>
         <div class="rightSlider">
           <ul>
@@ -671,17 +663,7 @@
         <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區"
           >:::</a
         >
-        <!-- 多包一層 heroSlider -->
         <div class="heroSlider">
-          <button
-            type="button"
-            class="mpSlider_sliderToggle"
-            aria-controls="mpSlider"
-            aria-label="暫停輪播"
-          >
-            暫停
-          </button>
-          <span id="mpSliderStatus" class="sr-only" aria-live="polite"></span>
           <div class="mpSlider wow fadeInUp">
             <div class="img-container">
               <a href="#" title="">
@@ -808,6 +790,15 @@
               </a>
             </div>
           </div>
+          <button
+            type="button"
+            class="mpSlider_sliderToggle"
+            aria-controls="mpSlider"
+            aria-label="暫停輪播"
+          >
+            暫停
+          </button>
+          <span id="mpSliderStatus" class="sr-only" aria-live="polite"></span>
         </div>
 
         <!-- 稅務新聞 -->
@@ -1070,7 +1061,6 @@
             </li>
           </ul>
         </div>
-        <!-- 節稅資訊 -->
         <div class="taxSlider wow fadeInUp">
           <h2 class="blockTitle"><span>Tax Mitigatio Info.</span>節稅資訊</h2>
           <ul>
@@ -1108,22 +1098,8 @@
             </li>
           </ul>
         </div>
-        <!-- 節稅懶人包 -->
         <div class="dummiesBlock wow fadeInUp">
-          <h2 class="blockTitle"><span>For Dummies</span>節稅懶人包</h2>
-          <button
-            type="button"
-            class="dummiesBlock_sliderToggle"
-            aria-controls="dummiesSlider"
-            aria-label="暫停輪播"
-          >
-            暫停
-          </button>
-          <span
-            id="dummiesSliderStatus"
-            class="sr-only"
-            aria-live="polite"
-          ></span>
+          <h2 class="blockTitle"><span>For Dummies</span>基稅懶人包</h2>
           <ul>
             <li>
               <div class="img-container">

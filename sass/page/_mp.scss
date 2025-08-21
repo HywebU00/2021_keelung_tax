@@ -1,5 +1,16 @@
 /////////////////////////////////////////////////////////以下為demo範例///
 // 首頁區塊設定
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 // more按鈕
 a.more {
   display: inline-block;
@@ -23,7 +34,7 @@ a.more {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   &:after {
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     transform: rotate(0);
@@ -34,7 +45,7 @@ a.more {
     transition: 0.3s ease-out;
   }
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     top: 0;
@@ -98,27 +109,85 @@ h2.blockTitle {
   @media screen and (max-width: 1000px) {
     margin-top: 40px;
   }
-  @include screen('mobile') {
+  @include screen("mobile") {
     margin-top: 60px;
     width: 100%;
     border-radius: 0;
     background: $secondaryColor;
     border-top: 1px solid #fff;
   }
+  .marqueeToggle {
+    position: absolute;
+    text-indent: -9999px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    margin: 0;
+    left: 20px;
+    top: 8px;
+    @include screen("mobile") {
+      left: 50px;
+    }
+    &.is-playing {
+      background: rgba(0, 0, 0, 0.2);
+      color: #000;
+    }
+    &:before {
+      content: "";
+      width: 4px;
+      height: 12px;
+      top: 16px;
+      left: 16px;
+      background-color: #fff;
+      box-shadow: #fff 8px 0px 0px;
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    &.is-paused {
+      background: #d93e10;
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 9px;
+        border-color: transparent transparent transparent #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        background: transparent;
+        box-shadow: none;
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
   &:after {
-    content: '';
+    content: "";
     width: 50px;
     height: 60px;
     display: block;
     position: absolute;
-    background: $secondaryColor url(../images/mp/icon_horn.svg) no-repeat center center;
+    background: $secondaryColor url(../images/mp/icon_horn.svg) no-repeat center
+      center;
     background-size: 25px;
     right: 0;
     top: 0;
-    @media screen and (max-width: 1100px) {
-      display: none;
-    }
-    @include screen('mobile') {
+    @include screen("mobile") {
       display: block;
       left: 0;
       right: auto;
@@ -137,7 +206,7 @@ h2.blockTitle {
     margin: 0;
     border-radius: 0;
     &:before {
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
       display: block;
@@ -154,35 +223,39 @@ h2.blockTitle {
       outline: none;
       background: none;
       opacity: 1;
+      box-shadow: none;
+    }
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 2px #d93e10 inset;
     }
   }
   .slick-prev {
     top: 5px;
     background: none;
     &:before {
-      content: '';
+      content: "";
       border-left: 2px solid #fff;
       border-bottom: 2px solid #fff;
     }
     &:hover:before,
     &:focus:before {
-      border-left: 2px solid blue;
-      border-bottom: 2px solid blue;
+      border-left: 2px solid rgb(255, 238, 54);
+      border-bottom: 2px solid rgb(255, 238, 54);
     }
   }
   .slick-next {
     top: 30px;
     background: none;
     &:before {
-      content: '';
+      content: "";
       border-top: 2px solid #fff;
       border-right: 2px solid #fff;
       top: 4px;
     }
     &:hover:before,
     &:focus:before {
-      border-top: 2px solid blue;
-      border-right: 2px solid blue;
+      border-top: 2px solid rgb(255, 238, 54);
+      border-right: 2px solid rgb(255, 238, 54);
     }
   }
   ul {
@@ -192,15 +265,9 @@ h2.blockTitle {
     padding: 0 0 0 10px;
     margin: 0 50px 0 70px;
     font-size: 0.9375rem;
-    @media screen and (max-width: 1200px) {
-      margin: 0 50px 0 7%;
-    }
-    @media screen and (max-width: 1100px) {
-      margin: 0 10px 0 7%;
-    }
-    @include screen('mobile') {
+    @include screen("mobile") {
       padding: 0;
-      margin: 0 0px 0 50px;
+      margin: 0 0px 0 100px;
     }
     li {
       padding: 0;
@@ -217,7 +284,7 @@ h2.blockTitle {
         color: #fff;
         width: 100%;
         text-decoration: none;
-        @include screen('mobile') {
+        @include screen("mobile") {
           padding-right: 0;
         }
         .hot {
@@ -243,7 +310,7 @@ h2.blockTitle {
   max-height: 594px;
   display: flex;
   justify-content: space-between;
-  @include screen('mobile') {
+  @include screen("mobile") {
     margin-top: 121px;
   }
   @media screen and (max-width: 768px) {
@@ -255,7 +322,7 @@ h2.blockTitle {
     border-radius: 0 20px 180px 0;
     overflow: hidden;
     position: relative;
-    @include screen('mobile') {
+    @include screen("mobile") {
       flex: 0 1 43%;
       border-radius: 0;
     }
@@ -266,6 +333,70 @@ h2.blockTitle {
     @media screen and (max-width: 440px) {
       height: 360px;
     }
+    .leftSlider_sliderToggle {
+      position: absolute;
+      text-indent: -9999px;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 50px;
+      width: 44px;
+      height: 44px;
+      border: none;
+      margin: 0;
+      left: 20px;
+      top: 200px;
+      z-index: 9;
+      @media screen and (max-width: 1000px) {
+        top: 170px;
+      }
+      @include screen("mobile") {
+        top: 30px;
+      }
+      &.is-playing {
+        background: rgba(0, 0, 0, 0.2);
+        color: #000;
+      }
+      &:before {
+        content: "";
+        width: 4px;
+        height: 12px;
+        top: 16px;
+        left: 16px;
+        background-color: #fff;
+        box-shadow: #fff 8px 0px 0px;
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+      &.is-paused {
+        background: $primaryColor;
+        &:before {
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 7px 0 7px 9px;
+          border-color: transparent transparent transparent #ffffff;
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          transform: translateY(-50%);
+          background: transparent;
+          box-shadow: none;
+        }
+        &:hover {
+          background: rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
     ul {
       @include li-reset;
       li {
@@ -275,7 +406,7 @@ h2.blockTitle {
           //   @include aspect-ratio(588, 601);
           // }
           &:after {
-            content: '';
+            content: "";
             width: 100%;
             height: 100%;
             position: absolute;
@@ -299,13 +430,13 @@ h2.blockTitle {
             position: absolute;
             @media screen and (max-width: 1200px) {
               top: 200px;
-              left: 8%;
-              right: 8%;
+              // left: 8%;
+              // right: 8%;
             }
             @media screen and (max-width: 1000px) {
-              top: 180px;
+              top: 170px;
             }
-            @include screen('mobile') {
+            @include screen("mobile") {
               top: 30px;
             }
             @media screen and (max-width: 768px) {
@@ -321,7 +452,7 @@ h2.blockTitle {
                 font-size: 1.125rem;
                 margin-bottom: 0.75rem;
                 text-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-                @include screen('mobile') {
+                @include screen("mobile") {
                   font-size: 1rem;
                 }
                 @media screen and (max-width: 768px) {
@@ -518,7 +649,7 @@ h2.blockTitle {
       bottom: 84px;
       color: #fff;
       font-size: 1.125rem;
-      font-family: 'Century Gothic', Arial, sans-serif;
+      font-family: "Century Gothic", Arial, sans-serif;
       @media screen and (max-width: 1200px) {
         bottom: 64px;
         left: 8%;
@@ -549,7 +680,7 @@ h2.blockTitle {
     @media screen and (max-width: 1000px) {
       padding-bottom: 10px;
     }
-    @include screen('mobile') {
+    @include screen("mobile") {
       flex: 0 1 56%;
     }
     @media screen and (max-width: 768px) {
@@ -558,63 +689,91 @@ h2.blockTitle {
       padding: 0;
       display: block;
     }
-    ul {
-      @include li-reset;
-      padding-bottom: 40px;
-      @media screen and (max-width: 1000px) {
-        padding-bottom: 25px;
-      }
-      li {
-        margin: 0 10px;
-      }
-      .img-container {
-        @include aspect-ratio(158, 234);
-        line-height: 0;
-        border-radius: 12px;
-        a {
-          // background: transparent;
-          .caption {
-            font-size: 1rem;
-            z-index: 11;
-            background: rgba(0, 0, 0, 0.6);
-            @include screen('mobile') {
-              font-size: 1.125rem;
-              height: 2.5em;
-              line-height: 2.5em;
+    .rightSliderBlock {
+      ul.slick-slider {
+        @include li-reset;
+        padding-bottom: 40px;
+        @media screen and (max-width: 1000px) {
+          padding-bottom: 25px;
+        }
+        .slick-list li {
+          margin: 0 10px;
+        }
+        .img-container {
+          @include aspect-ratio(158, 234);
+          line-height: 0;
+          border-radius: 12px;
+          a {
+            // background: transparent;
+            .caption {
+              font-size: 1rem;
+              z-index: 11;
+              background: rgba(0, 0, 0, 0.6);
+              @include screen("mobile") {
+                font-size: 1.125rem;
+                height: 2.5em;
+                line-height: 2.5em;
+              }
             }
-          }
-          img {
-            z-index: 9;
-          }
-          &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background: #000;
-            z-index: 10;
-            opacity: 0.3;
-            transition: all 1s;
-          }
-          &:hover {
+            img {
+              z-index: 9;
+            }
             &:after {
-              opacity: 0;
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              background: #000;
+              z-index: 10;
+              opacity: 0.3;
+              transition: all 1s;
+            }
+            &:hover {
+              &:after {
+                opacity: 0;
+              }
             }
           }
         }
-      }
-      .slick-prev {
-        left: 0;
-      }
-      .slick-next {
-        right: 0;
-      }
-      .slick-dots {
-        bottom: -40px;
-        @media screen and (max-width: 1000px) {
-          bottom: -25px;
+        .slick-prev {
+          left: 0;
+        }
+        .slick-next {
+          right: 0;
+        }
+        ul.slick-dots {
+          bottom: 10px;
+          // @media screen and (max-width: 1000px) {
+          //   bottom: -25px;
+          // }
+          @include screen("mobile") {
+            bottom: 0;
+          li {
+            span {
+              width: 12px;
+              height: 12px;
+              display: block;
+              background: #c4c4c4;
+              border-radius: 25px;
+              text-indent: -9999px;
+              transition: all 0.3s;
+              cursor: pointer;
+              &:hover {
+                background: #d93e10;
+              }
+            }
+            &.slick-active {
+              span {
+                width: 3.5rem;
+                background: #008470;
+                &:hover {
+                  background: #d93e10;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -622,37 +781,107 @@ h2.blockTitle {
 }
 
 // 首頁輪播
-.mpSlider {
-  width: 100%;
-  padding-bottom: 0;
-  .img-container {
-    @include aspect-ratio(1200, 380);
-    a {
+.heroSlider {
+  .mpSlider_sliderToggle {
+    position: absolute;
+    text-indent: -9999px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    margin: 0;
+    left: 20px;
+    top: 20px;
+    z-index: 9;
+    @include screen("mobile") {
+      top: 15px;
+      left: 20px;
     }
-    .caption {
-      font-size: 1rem;
-      height: 3rem;
-      line-height: 3rem;
-      text-align: left;
+    &.is-playing {
+      background: rgba(0, 0, 0, 0.2);
+      color: #000;
+    }
+    &:before {
+      content: "";
+      width: 4px;
+      height: 12px;
+      top: 16px;
+      left: 16px;
+      background-color: #fff;
+      box-shadow: #fff 8px 0px 0px;
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    &.is-paused {
+      background: $primaryColor;
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 9px;
+        border-color: transparent transparent transparent #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        background: transparent;
+        box-shadow: none;
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
     }
   }
-  // .slick-dots {
-  //   justify-content: flex-end;
-  //   padding-right: 10px;
-  // }
-  .slick-dots li button {
-    background: #fff;
-    opacity: 1;
-    &:hover,
-    &:focus {
-      background: #d93e10;
+  .mpSlider {
+    width: 100%;
+    padding-bottom: 0;
+    .img-container {
+      @include aspect-ratio(1200, 380);
+      a {
+      }
+      .caption {
+        font-size: 1rem;
+        height: 3rem;
+        line-height: 3rem;
+        text-align: left;
+      }
     }
-  }
-  .slick-dots li.slick-active button {
-    background: #008470;
-    &:hover,
-    &:focus {
-      background: #d93e10;
+    // .slick-dots {
+    //   justify-content: flex-end;
+    //   padding-right: 10px;
+    // }
+    .slick-dots li button {
+      background: #fff;
+      opacity: 1;
+      &:hover,
+      &:focus {
+        background: #d93e10;
+      }
+    }
+    .slick-dots li.slick-active button {
+      background: #008470;
+      &:hover,
+      &:focus {
+        background: #d93e10;
+      }
+    }
+    .slick-prev {
+      left: 20px;
+    }
+    .slick-next {
+      right: 20px;
     }
   }
 }
@@ -662,10 +891,10 @@ h2.blockTitle {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @include screen('tablet') {
+  @include screen("tablet") {
     padding: 60px 5%;
   }
-  @include screen('mobile') {
+  @include screen("mobile") {
     display: block;
     padding: 20px 15px;
   }
@@ -673,7 +902,7 @@ h2.blockTitle {
     flex: 0 1 590px;
     margin: 0;
     padding-top: 20px;
-    @include screen('mobile') {
+    @include screen("mobile") {
       width: 100%;
       padding-bottom: 30px;
     }
@@ -689,7 +918,7 @@ h2.blockTitle {
       position: relative;
       overflow: initial;
       font-size: 1.125rem;
-      @include screen('mobile') {
+      @include screen("mobile") {
         background: #ccc;
         margin-bottom: 4px;
       }
@@ -697,7 +926,7 @@ h2.blockTitle {
         color: #fff;
         background: $secondaryColor;
         &:before {
-          content: '';
+          content: "";
           width: 2px;
           height: 10px;
           background: #fff;
@@ -709,12 +938,12 @@ h2.blockTitle {
           transition: all 0.5s;
           transform: scale(1);
           transform-origin: center top;
-          @include screen('mobile') {
+          @include screen("mobile") {
             display: none;
           }
         }
         &:after {
-          content: '';
+          content: "";
           width: 2px;
           height: 20px;
           background: $secondaryColor;
@@ -726,7 +955,7 @@ h2.blockTitle {
           transition: all 0.5s;
           transform: scale(1, 1);
           transform-origin: center bottom;
-          @include screen('mobile') {
+          @include screen("mobile") {
             display: none;
           }
         }
@@ -785,7 +1014,8 @@ h2.blockTitle {
           height: 46px;
           display: inline-block;
           font-size: 0;
-          background: #ff8600 url(../images/mp/icon_rss.svg) no-repeat center center;
+          background: #ff8600 url(../images/mp/icon_rss.svg) no-repeat center
+            center;
           background-size: 24px;
           vertical-align: middle;
           margin-right: 8px;
@@ -793,7 +1023,8 @@ h2.blockTitle {
           transition: all 0.5s;
           &:hover,
           &:focus {
-            background: $secondaryColor url(../images/mp/icon_rss.svg) no-repeat center center;
+            background: $secondaryColor url(../images/mp/icon_rss.svg) no-repeat
+              center center;
             background-size: 24px;
           }
         }
@@ -805,10 +1036,10 @@ h2.blockTitle {
     margin-left: 7.5%;
     margin-top: 20px;
     padding-bottom: 40px;
-    @include screen('tablet') {
+    @include screen("tablet") {
       margin-left: 5%;
     }
-    @include screen('mobile') {
+    @include screen("mobile") {
       width: 100%;
       margin: 0;
     }
@@ -852,7 +1083,7 @@ h2.blockTitle {
       @include flex-md-equal(4, 0px);
       @include flex-lg-equal(4, 0px);
       @include gutter();
-      @include screen('mobile') {
+      @include screen("mobile") {
         margin-bottom: 24px;
         padding: 0 10px;
       }
@@ -875,7 +1106,7 @@ h2.blockTitle {
         transition: transform 1s;
         overflow: hidden;
         z-index: 9;
-        @include screen('mobile') {
+        @include screen("mobile") {
           width: 150px;
           height: 150px;
           padding: 16px 18px 12px 18px;
@@ -899,7 +1130,7 @@ h2.blockTitle {
           display: flex;
           align-items: center;
           overflow: hidden;
-          @include screen('mobile') {
+          @include screen("mobile") {
           }
         }
         &:hover,
@@ -919,18 +1150,18 @@ h2.blockTitle {
 
 .taxSlider {
   padding: 40px 0 60px 0;
-  @include screen('mobile') {
+  @include screen("mobile") {
     padding-bottom: 30px;
   }
   .slick-prev {
     left: 140px;
-    @include screen('tablet') {
+    @include screen("tablet") {
       left: 5px;
     }
   }
   .slick-next {
     right: 140px;
-    @include screen('tablet') {
+    @include screen("tablet") {
       right: 5px;
     }
   }
@@ -941,7 +1172,7 @@ h2.blockTitle {
         display: block;
         padding: 10px 35px 35px 35px;
         color: $primaryColor;
-        @include screen('mobile') {
+        @include screen("mobile") {
           padding: 10px 15px 35px 15px;
         }
         .title {
@@ -949,7 +1180,7 @@ h2.blockTitle {
           font-size: 1.875rem;
           font-weight: bold;
           margin-bottom: 20px;
-          @include screen('mobile') {
+          @include screen("mobile") {
             font-size: 1.5rem;
           }
         }
@@ -973,15 +1204,77 @@ h2.blockTitle {
   background-size: cover;
   padding: 40px 0;
   position: relative;
+  .dummiesBlock_sliderToggle {
+    position: absolute;
+    text-indent: -9999px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    margin: 0;
+    left: 20px;
+    top: 20px;
+    z-index: 9;
+    @include screen("mobile") {
+      top: 50px;
+      left: 15px;
+    }
+    &.is-playing {
+      background: rgba(0, 0, 0, 0.2);
+      color: #000;
+    }
+    &:before {
+      content: "";
+      width: 4px;
+      height: 12px;
+      top: 16px;
+      left: 16px;
+      background-color: #fff;
+      box-shadow: #fff 8px 0px 0px;
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    &.is-paused {
+      background: $primaryColor;
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 9px;
+        border-color: transparent transparent transparent #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        background: transparent;
+        box-shadow: none;
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
   ul {
     @include li-reset;
     padding: 0 0 80px 0;
     li {
       padding: 0 18px;
-      @include screen('tablet') {
+      @include screen("tablet") {
         padding: 0 12px;
       }
-      @include screen('mobile') {
+      @include screen("mobile") {
         padding: 0 15px;
       }
       .img-container {
@@ -997,7 +1290,7 @@ h2.blockTitle {
           padding: 0.5rem 1rem;
           font-size: 1rem;
           background: rgba(0, 0, 0, 0.6);
-          @include screen('mobile') {
+          @include screen("mobile") {
             height: auto;
           }
         }
@@ -1022,7 +1315,7 @@ h2.blockTitle {
   .slick-prev {
     left: 16%;
     margin-left: 100px;
-    @include screen('mobile') {
+    @include screen("mobile") {
       left: 15px;
       margin-left: 0;
     }
@@ -1030,7 +1323,7 @@ h2.blockTitle {
   .slick-next {
     left: 16%;
     margin-left: 150px;
-    @include screen('mobile') {
+    @include screen("mobile") {
       left: 15px;
       margin-left: 50px;
     }
@@ -1041,8 +1334,8 @@ h2.blockTitle {
     bottom: 50px;
     color: #666;
     font-size: 1.125rem;
-    font-family: 'Century Gothic', Arial, sans-serif;
-    @include screen('mobile') {
+    font-family: "Century Gothic", Arial, sans-serif;
+    @include screen("mobile") {
       margin-left: -65px;
       left: 50%;
     }
@@ -1054,7 +1347,7 @@ h2.blockTitle {
     position: absolute;
     right: 16%;
     bottom: 45px;
-    @include screen('tablet') {
+    @include screen("tablet") {
       right: 1rem;
     }
   }
@@ -1064,10 +1357,10 @@ h2.blockTitle {
   padding: 40px 144px;
   overflow: hidden;
   text-align: center;
-  @include screen('tablet') {
+  @include screen("tablet") {
     padding: 40px 80px;
   }
-  @include screen('mobile') {
+  @include screen("mobile") {
     padding: 40px 15px;
   }
   ul {
@@ -1121,7 +1414,7 @@ h2.blockTitle {
 .adSlider {
   background: $primaryColor;
   padding: 60px 100px 80px 100px;
-  @include screen('mobile') {
+  @include screen("mobile") {
     @include gutter();
   }
   .img-container {
@@ -1140,7 +1433,7 @@ h2.blockTitle {
     }
     &:focus {
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         z-index: 9;
         width: 100%;
@@ -1161,13 +1454,13 @@ h2.blockTitle {
   }
   .slick-prev {
     left: 40px;
-    @include screen('mobile') {
+    @include screen("mobile") {
       left: 10px;
     }
   }
   .slick-next {
     right: 40px;
-    @include screen('mobile') {
+    @include screen("mobile") {
       right: 10px;
     }
   }
@@ -1180,7 +1473,7 @@ h2.blockTitle {
   @media screen and (max-width: 1200px) {
     padding: 40px 3%;
   }
-  @include screen('mobile') {
+  @include screen("mobile") {
     margin-bottom: 0;
     padding: 20px 3%;
   }
@@ -1211,7 +1504,7 @@ h2.blockTitle {
       padding: 80px 0 10px 0;
     }
     &:before {
-      content: '';
+      content: "";
       width: 100%;
       height: 315px;
       background: url(../images/mp/contact_bg.jpg) no-repeat center top;
@@ -1273,13 +1566,15 @@ h2.blockTitle {
       }
     }
     .address {
-      background: $primaryColor url(../images/mp/icon_address.png) no-repeat 8% center;
+      background: $primaryColor url(../images/mp/icon_address.png) no-repeat 8%
+        center;
       @media screen and (max-width: 840px) {
         background: $primaryColor;
       }
     }
     .phone {
-      background: $primaryColor url(../images/mp/icon_phone.png) no-repeat 8% center;
+      background: $primaryColor url(../images/mp/icon_phone.png) no-repeat 8%
+        center;
       @media screen and (max-width: 840px) {
         background: $primaryColor;
       }
@@ -1292,15 +1587,15 @@ h2.blockTitle {
   color: $primaryColor;
   padding: 36px 16% 70px 16%;
   align-items: center;
-  @include screen('tablet') {
+  @include screen("tablet") {
     padding: 36px 10% 60px 10%;
     flex-wrap: wrap;
   }
-  @include screen('mobile') {
+  @include screen("mobile") {
     padding: 36px 10% 36px 10%;
   }
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 36px;
     right: 36px;
@@ -1310,18 +1605,18 @@ h2.blockTitle {
     background: #fff;
     box-shadow: 0 0 15px rgba($color: $primaryColor, $alpha: 0.3);
     z-index: 10;
-    @include screen('tablet') {
+    @include screen("tablet") {
       left: 3%;
       right: 3%;
     }
-    @include screen('mobile') {
+    @include screen("mobile") {
       padding: 36px 10%;
       flex-wrap: wrap;
       height: 80px;
     }
   }
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 48px;
@@ -1329,7 +1624,7 @@ h2.blockTitle {
     z-index: 9;
     left: 0;
     bottom: 0;
-    @include screen('mobile') {
+    @include screen("mobile") {
       display: none;
     }
   }
@@ -1341,7 +1636,7 @@ h2.blockTitle {
     padding-right: 7%;
     position: relative;
     z-index: 10;
-    @include screen('mobile') {
+    @include screen("mobile") {
       padding-right: 5%;
     }
     @media screen and (max-width: 500px) {
@@ -1360,7 +1655,7 @@ h2.blockTitle {
       font-size: 0;
       color: $primaryColor;
       flex: 0 0 64px;
-      @include screen('mobile') {
+      @include screen("mobile") {
       }
       @media screen and (max-width: 665px) {
         width: 48px;
@@ -1380,7 +1675,8 @@ h2.blockTitle {
         background-size: 32px;
         &:hover,
         &:focus {
-          background: $secondaryColor url(../images/mp/icon_facebook.svg) no-repeat center center;
+          background: $secondaryColor url(../images/mp/icon_facebook.svg)
+            no-repeat center center;
           background-size: 32px;
         }
       }
@@ -1389,7 +1685,8 @@ h2.blockTitle {
         background-size: 32px;
         &:hover,
         &:focus {
-          background: $secondaryColor url(../images/mp/icon_youtube.svg) no-repeat center center;
+          background: $secondaryColor url(../images/mp/icon_youtube.svg)
+            no-repeat center center;
           background-size: 32px;
         }
       }
@@ -1398,7 +1695,8 @@ h2.blockTitle {
         background-size: 32px;
         &:hover,
         &:focus {
-          background: $secondaryColor url(../images/mp/icon_line.svg) no-repeat center center;
+          background: $secondaryColor url(../images/mp/icon_line.svg) no-repeat
+            center center;
           background-size: 32px;
         }
       }
@@ -1407,7 +1705,8 @@ h2.blockTitle {
         background-size: 32px;
         &:hover,
         &:focus {
-          background: $secondaryColor url(../images/mp/icon_service.svg) no-repeat center center;
+          background: $secondaryColor url(../images/mp/icon_service.svg)
+            no-repeat center center;
           background-size: 32px;
         }
       }
@@ -1418,7 +1717,7 @@ h2.blockTitle {
     padding-left: 7%;
     position: relative;
     z-index: 10;
-    @include screen('mobile') {
+    @include screen("mobile") {
       padding-left: 5%;
       margin-top: 10px;
     }
