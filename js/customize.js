@@ -479,7 +479,7 @@ $(function(){
       .text(paused ? '播放' : '暫停')
       .attr('aria-label', paused ? '播放輪播' : '暫停輪播');
 
-    $dummiesBlockUl.attr('aria-live', paused ? 'polite' : 'off');
+    // $dummiesBlockUl.attr('aria-live', paused ? 'polite' : 'off');
     // if ($dummiesBlockStatus.length) $dummiesBlockStatus.text(paused ? '輪播已暫停' : '輪播已播放'); // ← 已移除
   }
   dummiesSetToggleUI(false); // 初始播放中
